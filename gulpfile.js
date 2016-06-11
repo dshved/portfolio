@@ -12,12 +12,18 @@ global.$ = {
 	},
 	gulp: require('gulp'),
 	rimraf: require('rimraf'),
+	ghPages: require('gulp-gh-pages'),
 	browserSync: require('browser-sync').create(),
 	gp: require('gulp-load-plugins')()
 };
 
 $.path.task.forEach(function(taskPath) {
 	require(taskPath)();
+});
+
+$.gulp.task('deploy', function() {
+  return $.gulp.src('./build/**/*.*')
+    .pipe($.ghPages());
 });
 
 $.gulp.task('default', $.gulp.series(

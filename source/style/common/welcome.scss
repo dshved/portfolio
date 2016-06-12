@@ -26,19 +26,25 @@
 .wrapper {
   position: relative;
   min-height: 100%;
+  min-width: 320px;
   margin-bottom: -100px;
   background: url('../img/bg.jpg') top left;
   background-repeat: repeat-x;
+  background-size: cover;
   &:after {
     content: '';
     display: block;
     height: 100px;
   }
+
 }
 
 .header {
   padding-top: 24px;
   height: 100px;
+  @include phone {
+    padding-top: 16px;
+  }
   .login-btn {
     margin-right: 100px;
     display: block;
@@ -56,6 +62,9 @@
       color: #cb871f;
       background-color: #fff;
     }
+    @include phone {
+      margin-right: 70px;
+    }
   }
 }
 
@@ -68,6 +77,12 @@
   left: 50%;
   margin-top: -190px;
   margin-left: -198px;
+
+  @include phone {
+    width: 290px;
+    height: 360px;
+    margin-left: -145px;
+  }
 }
 
 .card {
@@ -100,6 +115,9 @@
 .user__info {
   text-align: center;
   padding-top: 40px;
+  @include phone {
+    padding-top: 20px;
+  }
   .user__img {
     position: relative;
     left: 50%;
@@ -138,6 +156,7 @@
         &:hover {
           opacity: 1;
         }
+
       }
       &:last-child {
         margin-right: 0;
@@ -164,7 +183,9 @@
       color: #fff;
       font-family: "Roboto";
       font-size: 16px;
-      
+      @include phone {
+        padding: 0 16px;
+      }
       &:hover{
         background-color: #d18712;
       }
@@ -204,6 +225,9 @@
     margin-left: 5px;
     transform: rotateY(180deg);
   }
+  @include phone {
+    padding: 30px 0px;
+  }
 }
 .input-group {
   position: relative;
@@ -231,6 +255,9 @@
   font-family: "Roboto";
   font-size: 16px;
   margin-bottom: 20px;
+  @include phone {
+    width: 270px;
+  }
 }
 
 .robot__text {
@@ -272,19 +299,27 @@ label {
   &__right {
     border-bottom-right-radius: 5px;
   }
+  @include phone {
+    width: 145px;
+  }
 }
 .button-group {
   margin-top: 45px;
+  @include phone {
+    margin-top: 26px;
+  }
 }
 .footer {
+  min-width: 320px;
   height: 100px;
   position: relative;
+  padding: 50px 10px 0px 10px;
   background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
   background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
   
   &__text {
-    padding-top: 50px;
+    
     color: #fff;
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;

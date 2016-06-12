@@ -8,6 +8,7 @@ var myModule = (function () {
   var _setUpListners = function () {
     $('.login-btn').on('click', _showLogin);
     $('.footer').on('click', _showInfo);
+    $('.index').on('click', _showInfo);
 
   };
 
@@ -19,9 +20,9 @@ var myModule = (function () {
   };
  
   var _showInfo = function (e) {
-    e.preventDefault();
+    
     $('.card').removeClass('flipped');
-    $('.login-btn').css('display', 'block');
+    $('.login-btn').css('display', 'inline-block');
   };
   
   return {
@@ -38,10 +39,10 @@ $(window).on('load', function () {
     $preloader.delay(350).fadeOut('slow');
 });
 
-  $(function(){
-        var x = 0;
-        setInterval(function(){
-            x-=1;
-            $('.wrapper').css('background-position', x + 'px 0');
-        }, 50);
-    })
+  // $(function(){
+  //       var x = 0;
+  //       setInterval(function(){
+  //           x-=1;
+  //           $('.wrapper').css('background-position', x + 'px 0');
+  //       }, 50);
+  //   })

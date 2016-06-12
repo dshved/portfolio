@@ -27,7 +27,7 @@
   position: relative;
   min-height: 100%;
   min-width: 320px;
-  margin-bottom: -100px;
+  margin-bottom: -145px;
   background: url('../img/bg.jpg') top left;
   background-repeat: repeat-x;
   background-size: cover;
@@ -42,12 +42,13 @@
 .header {
   padding-top: 24px;
   height: 100px;
+  text-align: center;
   @include phone {
-    padding-top: 16px;
+    
   }
   .login-btn {
     margin-right: 100px;
-    display: block;
+    display: inline-block;
     float: right;
     width: 180px;
     height: 45px;
@@ -63,19 +64,26 @@
       background-color: #fff;
     }
     @include phone {
-      margin-right: 70px;
+      margin-right: 0;
+      float: none;
     }
   }
+}
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .welcome {
   width: 380px;
   height: 395px;
-  position: absolute;
+  /*position: absolute;*/
+  position: relative;
   perspective: 800px;
   top: 50%;
   left: 50%;
-  margin-top: -190px;
+  /*margin-top: -190px;*/
   margin-left: -198px;
 
   @include phone {
@@ -311,19 +319,23 @@ label {
 }
 .footer {
   min-width: 320px;
-  height: 100px;
-  position: relative;
-  padding: 50px 10px 0px 10px;
+  height: 145px;
+  position: relative; 
   background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
   background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
   
   &__text {
-    
+    padding: 100px 20px 0;
+
     color: #fff;
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     text-align: center;
+    @include phone {
+      padding-top: 90px;
+      font-size: 15px;
+    }
     
   }
 }

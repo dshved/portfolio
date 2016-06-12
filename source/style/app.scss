@@ -1,13 +1,6 @@
-html {
-box-sizing: border-box;
-}
-*, *:before, *:after {
-box-sizing: inherit;
-}
+@import 'mixin/fonts';
 
-html,
-body {
-	height: 100%;
-}
-
+@import 'common/base';
 @import 'common/welcome';
+@import 'common/work';
+@import 'common/footer'

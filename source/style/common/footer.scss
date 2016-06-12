@@ -1,0 +1,83 @@
+@import 'mixin/clearfix';
+
+.f-work {
+  padding: 30px;
+  height: 100%;
+  background-color: rgba(55, 61, 65, 0.9);
+  &__copyright,
+  &__menu,
+  &__contact {
+    width: 33.3333%;
+    height: 100%;
+    float: left;
+    padding-left: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  &__copyright {
+    padding-left: 0;
+  }
+  &__contact {
+    border-right: none;
+  }
+  @include clearfix;
+}
+
+
+.copyright__info {
+  font-family: "RobotoLight";
+}
+
+.copyright__about {
+  font-family: "RobotoLight";
+  opacity: .5;
+}
+
+.footer-menu {
+  margin-bottom: 30px;
+  &__list {
+    display: inline-block;
+    width: 100%;
+    font-size: 0;
+  }
+  &__item {
+    display: inline-block;
+    font-size: 16px;
+    padding-right: 10px;
+  }
+  &__link {
+    color: rgba(255, 255, 255, 0.5);
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+.social-menu {
+  &__list {
+
+  }
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    display: inline-block;
+    margin-right: 25px;
+    color: rgba(255, 255, 255, 0.5);
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+.footer-contact {
+  font-family: "RobotoLight";
+  color: rgba(255, 255, 255, .5);
+  &__item {
+    margin-bottom: 2px;
+  }
+  &__link {
+    font-family: "RobotoLight";
+    color: rgba(255, 255, 255, .5);
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}

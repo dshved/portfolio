@@ -14,15 +14,17 @@ var myModule = (function () {
 
   var _showLogin = function (e) {
     e.preventDefault();
-    $('.card').addClass('flipped');
-    $('.login-btn').css('display', 'none');
-    $('.card__login').css('background-color', 'rgba(215, 191, 155, 1)');
+    $('.welcome__container').toggleClass('flipped');
+    $('.login-btn').css({
+      'visibility': 'hidden'
+    });
   };
  
   var _showInfo = function (e) {
-    
-    $('.card').removeClass('flipped');
-    $('.login-btn').css('display', 'inline-block');
+    $('.welcome__container').removeClass('flipped');
+    $('.login-btn').css({
+      'visibility': 'visible'
+    });
   };
   
   return {
@@ -32,12 +34,6 @@ var myModule = (function () {
 
 myModule.init();
 
-$(window).on('load', function () {
-    var $preloader = $('#page-preloader'),
-        $spinner   = $preloader.find('.spinner');
-    $spinner.fadeOut();
-    $preloader.delay(350).fadeOut('slow');
-});
 
   // $(function(){
   //       var x = 0;
@@ -46,3 +42,16 @@ $(window).on('load', function () {
   //           $('.wrapper').css('background-position', x + 'px 0');
   //       }, 50);
   //   })
+
+$(document).ready(function(){
+
+  setTimeout(function(){
+    $( "#page-preloader" ).fadeOut( "slow" );
+  }, 3000);
+  
+
+
+  $('#nav-icon').click(function(){
+    $(this).toggleClass('open');
+  });
+});

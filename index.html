@@ -17,67 +17,70 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
-    <div id="page-preloader"><span class="spinner"></span></div><!--[if lt IE 7]>
+    <div id="page-preloader">
+      <div class="loader"></div>
+    </div><!--[if lt IE 7]>
 <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
 <![endif]-->
-    <div class="wrapper">
+    <div class="wrapper bg">
       <header class="header"><a class="login-btn" href="#">Авторизоваться</a></header>
       <div class="main">
-        <section class="welcome">
-          <div class="card">
-            <div class="card__info">
-              <div class="user__info">
-                <div class="user__img"><img src="assets/img/user.jpg" alt="Это я!"></div>
-                <div class="user__name">Дмитрий Швед</div>
-                <div class="user__desc">Личный сайт веб-разработчика</div>
-                <div class="user__social">
-                  <ul class="social__list">
-                    <li class="list__item"><a class="item__link" href="#"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a></li>
-                    <li class="list__item"><a class="item__link" href="#"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a></li>
-                    <li class="list__item"><a class="item__link" href="#"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                  </ul>
-                </div>
-                <div class="user__menu">
-                  <ul class="menu__list">
-                    <li class="list__item"><a class="item__link" href="work.html">Мои работы</a></li>
-                    <li class="list__item"><a class="item__link" href="about.html">Обо мне</a></li>
-                    <li class="list__item"><a class="item__link" href="blog.html">Блог</a></li>
-                  </ul>
+        <div class="welcome">
+          <div class="welcome__container">
+            <div class="welcome__front welcome__block">
+              <div class="card__info">
+                <div class="user__info">
+                  <div class="user__img"><img src="assets/img/user.jpg" alt="Это я!"></div>
+                  <div class="user__name">Дмитрий Швед</div>
+                  <div class="user__desc">Личный сайт веб-разработчика</div>
+                  <div class="user__social">
+                    <ul class="social__list">
+                      <li class="list__item"><a class="item__link" href="#"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a></li>
+                      <li class="list__item"><a class="item__link" href="#"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a></li>
+                      <li class="list__item"><a class="item__link" href="#"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
+                    </ul>
+                  </div>
+                  <div class="user__menu">
+                    <ul class="menu__list">
+                      <li class="list__item"><a class="item__link" href="work.html">Мои работы</a></li>
+                      <li class="list__item"><a class="item__link" href="about.html">Обо мне</a></li>
+                      <li class="list__item"><a class="item__link" href="blog.html">Блог</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="card__login">
-              <div class="login__header">Авторизуйтесь</div>
-              <form action="#">
-                <div class="input-group"><span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                  <input class="form-control" type="text" placeholder="Логин">
-                </div>
-                <div class="input-group"><span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                  <input class="form-control" type="password" placeholder="Пароль">
-                </div>
-                <div class="input-group">
-                  <input class="checkbox" id="user_human" type="checkbox">
-                  <label for="user_human">Я человек</label>
-                </div>
-                <div class="input-group">
-                  <div class="robot__text">А вы точно не робот?</div>
-                  <input class="radio" id="human_yes" type="radio" name="human">
-                  <label for="human_yes">Да</label>
-                  <input class="radio" id="human_no" type="radio" name="human">
-                  <label for="human_no">Не уверен</label>
-                </div>
-                <div class="button-group">
-                  <button class="btn btn__left index" type="cancel">На главную</button>
-                  <button class="btn btn__right" type="submit">Добавить</button>
-                </div>
-              </form>
+            <div class="welcome__back welcome__block">
+              <div class="card__login">
+                <div class="login__header">Авторизуйтесь</div>
+                <form action="#">
+                  <div class="input-group"><span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                    <input class="form-control" type="text" placeholder="Логин">
+                  </div>
+                  <div class="input-group"><span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                    <input class="form-control" type="password" placeholder="Пароль">
+                  </div>
+                  <div class="input-group">
+                    <input class="checkbox" id="user_human" type="checkbox">
+                    <label for="user_human">Я человек</label>
+                  </div>
+                  <div class="input-group">
+                    <div class="robot__text">А вы точно не робот?</div>
+                    <input class="radio" id="human_yes" type="radio" name="human">
+                    <label for="human_yes">Да</label>
+                    <input class="radio" id="human_no" type="radio" name="human">
+                    <label for="human_no">Не уверен</label>
+                  </div>
+                  <div class="button-group">
+                    <button class="btn btn__left index" type="cancel">На главную</button>
+                    <button class="btn btn__right" type="submit">Добавить</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="footer__text">© Дмитрий Швед | создано с любовью в LoftSchool | 2016</div>
-    </footer>
   </body>
 </html>

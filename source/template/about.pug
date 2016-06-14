@@ -2,11 +2,229 @@ doctype html
 html
   - var title = "Dmitriy Shved - связаться со мной"
   include common/_head
+  script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+  script.
+      google.maps.event.addDomListener(window, 'load', init);
+      var map;
+      function init() {
+      var mapOptions = {
+      center: new google.maps.LatLng(59.937475,30.352243),
+      zoom: 15,
+      zoomControl: false,
+      disableDoubleClickZoom: true,
+      mapTypeControl: false,
+      scaleControl: false,
+      scrollwheel: false,
+      panControl: false,
+      streetViewControl: false,
+      draggable : true,
+      overviewMapControl: false,
+      overviewMapControlOptions: {
+      opened: false,
+      },
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: [
+      {
+      "featureType": "administrative",
+      "elementType": "labels.text.fill",
+      "stylers": [
+      {
+      "color": "#444444"
+      }
+      ]
+      },
+      {
+      "featureType": "landscape",
+      "elementType": "all",
+      "stylers": [
+      {
+      "color": "#f2f2f2"
+      }
+      ]
+      },
+      {
+      "featureType": "poi",
+      "elementType": "all",
+      "stylers": [
+      {
+      "visibility": "off"
+      }
+      ]
+      },
+      {
+      "featureType": "road",
+      "elementType": "all",
+      "stylers": [
+      {
+      "saturation": -100
+      },
+      {
+      "lightness": 45
+      }
+      ]
+      },
+      {
+      "featureType": "road.highway",
+      "elementType": "all",
+      "stylers": [
+      {
+      "visibility": "simplified"
+      }
+      ]
+      },
+      {
+      "featureType": "road.arterial",
+      "elementType": "labels.icon",
+      "stylers": [
+      {
+      "visibility": "off"
+      }
+      ]
+      },
+      {
+      "featureType": "transit",
+      "elementType": "all",
+      "stylers": [
+      {
+      "visibility": "off"
+      }
+      ]
+      },
+      {
+      "featureType": "water",
+      "elementType": "all",
+      "stylers": [
+      {
+      "color": "#ecae46"
+      },
+      {
+      "visibility": "on"
+      }
+      ]
+      }
+      ],
+      }
+      var mapElement = document.getElementById('mymap');
+      var map = new google.maps.Map(mapElement, mapOptions);
+      var locations = [
+      ];
+      for (i = 0; i < locations.length; i++) {
+      if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+      if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+      if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+      if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+      if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+      marker = new google.maps.Marker({
+      icon: markericon,
+      position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+      map: map,
+      title: locations[i][0],
+      desc: description,
+      tel: telephone,
+      email: email,
+      web: web
+      });
+      link = '';     }
+      }
   body
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
     div.wrapper
       include common/_header
+      section.info
+        .user__info
+          .user__img
+            img(src="assets/img/user.jpg", alt="Это я!")
+          .user__name Дмитрий Швед
+          .user__desc Личный сайт веб-разработчик
+        //- .box-tranigle
+        //-   svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+        //-     polygon(points='0,0   0,86   500.8,86   500.8,75.5')
+        //-     polygon(points='1000,0   1000,86   500,86   500,75.5')
+      section.skill
+        .skill__container
+          .skill__left
+            .about-cont
+              .about-header.float-left
+                .header-text Обо мне
+              .about-info.float-right
+                .skill__user-pic
+                  img(src="assets/img/user-2.jpg", alt="")
+                .skill__about-me Кто я
+                .skill__about-desc  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eveniet, iure reiciendis quis numquam. Maxime repellat laudantium possimus voluptas blanditiis reprehenderit enim corporis in numquam quo magnam aliquam quos voluptatum dolore quam fuga qui nostrum quibusdam excepturi necessitatibus doloremque eaque, beatae impedit, ut modi! Vitae itaque ut ipsum veritatis, voluptatum.
+          .skill__right
+            .skill__items
+              .skill__name Frontend
+              figure.chart(data-percent='45')
+                figcaption
+                  span HTML5
+                  svg(width='120', height='120')
+                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+              figure.chart(data-percent='40')
+                figcaption
+                  span CSS3
+                  svg(width='120', height='120')
+                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+              figure.chart(data-percent='70')
+                figcaption
+                  span JavaScript &jQuery
+                  svg(width='120', height='120')
+                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+            .skill__items
+              .skill__name Backend
+              figure.chart(data-percent='80')
+                figcaption
+                  span PHP
+                  svg(width='120', height='120')
+                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+              figure.chart(data-percent='64')
+                figcaption
+                  span mySQL
+                  svg(width='120', height='120')
+                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+              figure.chart(data-percent='36')
+                figcaption
+                  span Node.js
+                  svg(width='120', height='120')
+                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+              figure.chart(data-percent='95')
+                figcaption
+                  span Mongo.db
+                  svg(width='120', height='120')
+                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+            .skill__items
+              .skill__name WorkFlow
+              figure.chart(data-percent='55')
+                figcaption
+                  span Git
+                  svg(width='120', height='120')
+                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+              figure.chart(data-percent='64')
+                figcaption 
+                  span Gulp
+                  svg(width='120', height='120')
+                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+              figure.chart(data-percent='47')
+                figcaption 
+                  span Bower
+                  svg(width='120', height='120')
+                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+
+      section.maps
+        .maps__container
+          .maps__contacts
+            .contacts__header Контакты
+            ul.contacts__list
+              li.contacts__item
+                a.contacts__link(href="skype:my_skype") #[i.fa.fa-skype.fa-2x]  my_skype
+              li.contacts__item
+                a.contacts__link(href="mailto:my_mail@mail.ru") #[i.fa.fa-envelope.fa-2x]  my_mail@mail.ru
+              li.contacts__item
+                a.contacts__link(href="tell:+455888787") #[i.fa.fa-phone.fa-2x]  +455888787
+              li.contacts__item
+                a.contacts__link(href="#mymap") #[i.fa.fa-map-marker.fa-2x] Мой адрес не дом и не улица
+          #mymap
+          
       
     include common/_footer

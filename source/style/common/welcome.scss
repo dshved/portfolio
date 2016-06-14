@@ -196,17 +196,19 @@
   }
 }
 
-.user__menu {
+
+.menu__list {
+  display: table;
+  width: 100%;
+  font-size: 0;
   position: absolute;
   left: 0;
-  bottom: 0;}
-.menu__list {
-  font-size: 0;
+  bottom: 0;
   .list__item {
-    display: inline-block;
+    display: table-cell;
     border-right: 2px solid rgba(222, 227, 231, 0.5);
     .item__link {
-      padding: 0 31px;
+      padding: 0 10px;
       height: 45px;
       line-height: 45px;
       display: block;

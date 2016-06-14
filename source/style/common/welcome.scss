@@ -87,7 +87,7 @@
   border-radius: 5px;
   border: 1px solid #fff;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "RobotoMedium", sans-serif;
   font-size: 16px;
   &:hover {
     color: #cb871f;
@@ -170,14 +170,14 @@
   .user__name {
     margin-bottom: 5px;
     color: #fff;
-    font-family: "Roboto";
+    font-family: "RobotoMedium";
     font-size: 28px;
   }
   .user__desc {
     margin-bottom: 25px;
     opacity: .8;
     color: #fff;
-    font-family: "Roboto";
+    font-family: "RobotoRegular";
     font-size: 16px;
   }
   .social__list {
@@ -216,7 +216,7 @@
       display: block;
       background-color: #efab26;
       color: #fff;
-      font-family: "Roboto";
+      font-family: "RobotoRegular";
       font-size: 16px;
       @include phone {
         padding: 0 16px;
@@ -241,7 +241,7 @@
   padding: 40px 0;
   text-align: center;
   color: #fff;
-  font-family: "Sansus Webissimo", sans-serif;
+  font-family: "SansusWebissimoRegular", sans-serif;
   font-size: 35px;
   text-transform: uppercase;
   &:before, &:after {
@@ -287,7 +287,7 @@
   background-color: #fff;
   border: none;
   color: #373d41;
-  font-family: "Roboto";
+
   font-size: 16px;
   margin-bottom: 20px;
   @include phone {
@@ -298,7 +298,7 @@
 .robot__text {
   opacity: .8;
   color: #fff;
-  font-family: "Roboto";
+  font-family: "RobotoRegular";
   font-size: 16px;
   font-weight: bold;
 
@@ -307,7 +307,7 @@
 label {
   opacity: .8;
   color: #fff;
-  font-family: "Roboto";
+  font-family: "RobotoRegular";
   font-size: 16px;
 }
 
@@ -323,7 +323,7 @@ label {
   overflow: auto;
   white-space: nowrap;
   color: #fff;
-  font-family: "Roboto";
+  font-family: "RobotoRegular";
   font-size: 16px;
   &:hover {
     background-color: #cd8920;
@@ -355,7 +355,7 @@ label {
   &__text {
     padding: 100px 20px 0;
     color: #fff;
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: "RobotoRegular", Arial, sans-serif;
     font-size: 16px;
     text-align: center;
     @include phone {

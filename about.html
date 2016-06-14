@@ -16,6 +16,131 @@
     <script src="assets/js/app.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
+  <script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script>
+  <script>
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+    var mapOptions = {
+    center: new google.maps.LatLng(59.937475,30.352243),
+    zoom: 15,
+    zoomControl: false,
+    disableDoubleClickZoom: true,
+    mapTypeControl: false,
+    scaleControl: false,
+    scrollwheel: false,
+    panControl: false,
+    streetViewControl: false,
+    draggable : true,
+    overviewMapControl: false,
+    overviewMapControlOptions: {
+    opened: false,
+    },
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    styles: [
+    {
+    "featureType": "administrative",
+    "elementType": "labels.text.fill",
+    "stylers": [
+    {
+    "color": "#444444"
+    }
+    ]
+    },
+    {
+    "featureType": "landscape",
+    "elementType": "all",
+    "stylers": [
+    {
+    "color": "#f2f2f2"
+    }
+    ]
+    },
+    {
+    "featureType": "poi",
+    "elementType": "all",
+    "stylers": [
+    {
+    "visibility": "off"
+    }
+    ]
+    },
+    {
+    "featureType": "road",
+    "elementType": "all",
+    "stylers": [
+    {
+    "saturation": -100
+    },
+    {
+    "lightness": 45
+    }
+    ]
+    },
+    {
+    "featureType": "road.highway",
+    "elementType": "all",
+    "stylers": [
+    {
+    "visibility": "simplified"
+    }
+    ]
+    },
+    {
+    "featureType": "road.arterial",
+    "elementType": "labels.icon",
+    "stylers": [
+    {
+    "visibility": "off"
+    }
+    ]
+    },
+    {
+    "featureType": "transit",
+    "elementType": "all",
+    "stylers": [
+    {
+    "visibility": "off"
+    }
+    ]
+    },
+    {
+    "featureType": "water",
+    "elementType": "all",
+    "stylers": [
+    {
+    "color": "#ecae46"
+    },
+    {
+    "visibility": "on"
+    }
+    ]
+    }
+    ],
+    }
+    var mapElement = document.getElementById('mymap');
+    var map = new google.maps.Map(mapElement, mapOptions);
+    var locations = [
+    ];
+    for (i = 0; i < locations.length; i++) {
+    if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+    if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+    if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+    if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+    if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+    marker = new google.maps.Marker({
+    icon: markericon,
+    position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+    map: map,
+    title: locations[i][0],
+    desc: description,
+    tel: telephone,
+    email: email,
+    web: web
+    });
+    link = '';     }
+    }
+  </script>
   <body><!--[if lt IE 7]>
 <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
 <![endif]-->
@@ -36,6 +161,124 @@
           </div>
         </nav>
       </header>
+      <section class="info">
+        <div class="user__info">
+          <div class="user__img"><img src="assets/img/user.jpg" alt="Это я!"></div>
+          <div class="user__name">Дмитрий Швед</div>
+          <div class="user__desc">Личный сайт веб-разработчик</div>
+        </div>
+      </section>
+      <section class="skill">
+        <div class="skill__container">
+          <div class="skill__left">
+            <div class="about-cont">
+              <div class="about-header float-left">
+                <div class="header-text">Обо мне</div>
+              </div>
+              <div class="about-info float-right">
+                <div class="skill__user-pic"><img src="assets/img/user-2.jpg" alt=""></div>
+                <div class="skill__about-me">Кто я</div>
+                <div class="skill__about-desc"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eveniet, iure reiciendis quis numquam. Maxime repellat laudantium possimus voluptas blanditiis reprehenderit enim corporis in numquam quo magnam aliquam quos voluptatum dolore quam fuga qui nostrum quibusdam excepturi necessitatibus doloremque eaque, beatae impedit, ut modi! Vitae itaque ut ipsum veritatis, voluptatum.</div>
+              </div>
+            </div>
+          </div>
+          <div class="skill__right">
+            <div class="skill__items">
+              <div class="skill__name">Frontend</div>
+              <figure class="chart" data-percent="45">
+                <figcaption><span>HTML5</span>
+                  <svg width="120" height="120">
+                    <circle class="outer" cx="130" cy="60" r="50" transform="rotate(-90, 95, 95)"></circle>
+                  </svg>
+                </figcaption>
+              </figure>
+              <figure class="chart" data-percent="40">
+                <figcaption><span>CSS3</span>
+                  <svg width="120" height="120">
+                    <circle class="outer" cx="130" cy="60" r="50" transform="rotate(-90, 95, 95)"></circle>
+                  </svg>
+                </figcaption>
+              </figure>
+              <figure class="chart" data-percent="70">
+                <figcaption><span>JavaScript &jQuery</span>
+                  <svg width="120" height="120">
+                    <circle class="outer" cx="130" cy="60" r="50" transform="rotate(-90, 95, 95)"></circle>
+                  </svg>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="skill__items">
+              <div class="skill__name">Backend</div>
+              <figure class="chart" data-percent="80">
+                <figcaption><span>PHP</span>
+                  <svg width="120" height="120">
+                    <circle class="outer" cx="130" cy="60" r="50" transform="rotate(-90, 95, 95)"></circle>
+                  </svg>
+                </figcaption>
+              </figure>
+              <figure class="chart" data-percent="64">
+                <figcaption><span>mySQL</span>
+                  <svg width="120" height="120">
+                    <circle class="outer" cx="130" cy="60" r="50" transform="rotate(-90, 95, 95)"></circle>
+                  </svg>
+                </figcaption>
+              </figure>
+              <figure class="chart" data-percent="36">
+                <figcaption><span>Node.js</span>
+                  <svg width="120" height="120">
+                    <circle class="outer" cx="130" cy="60" r="50" transform="rotate(-90, 95, 95)"></circle>
+                  </svg>
+                </figcaption>
+              </figure>
+              <figure class="chart" data-percent="95">
+                <figcaption><span>Mongo.db</span>
+                  <svg width="120" height="120">
+                    <circle class="outer" cx="130" cy="60" r="50" transform="rotate(-90, 95, 95)"></circle>
+                  </svg>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="skill__items">
+              <div class="skill__name">WorkFlow</div>
+              <figure class="chart" data-percent="55">
+                <figcaption><span>Git</span>
+                  <svg width="120" height="120">
+                    <circle class="outer" cx="130" cy="60" r="50" transform="rotate(-90, 95, 95)"></circle>
+                  </svg>
+                </figcaption>
+              </figure>
+              <figure class="chart" data-percent="64">
+                <figcaption> <span>Gulp</span>
+                  <svg width="120" height="120">
+                    <circle class="outer" cx="130" cy="60" r="50" transform="rotate(-90, 95, 95)"></circle>
+                  </svg>
+                </figcaption>
+              </figure>
+              <figure class="chart" data-percent="47">
+                <figcaption> <span>Bower</span>
+                  <svg width="120" height="120">
+                    <circle class="outer" cx="130" cy="60" r="50" transform="rotate(-90, 95, 95)"></circle>
+                  </svg>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="maps">
+        <div class="maps__container">
+          <div class="maps__contacts">
+            <div class="contacts__header">Контакты</div>
+            <ul class="contacts__list">
+              <li class="contacts__item"><a class="contacts__link" href="skype:my_skype"><i class="fa fa-skype fa-2x"></i>  my_skype</a></li>
+              <li class="contacts__item"><a class="contacts__link" href="mailto:my_mail@mail.ru"><i class="fa fa-envelope fa-2x"></i>  my_mail@mail.ru</a></li>
+              <li class="contacts__item"><a class="contacts__link" href="tell:+455888787"><i class="fa fa-phone fa-2x"></i>  +455888787</a></li>
+              <li class="contacts__item"><a class="contacts__link" href="#mymap"><i class="fa fa-map-marker fa-2x"></i> Мой адрес не дом и не улица</a></li>
+            </ul>
+          </div>
+          <div id="mymap"></div>
+        </div>
+      </section>
     </div>
     <footer class="footer">
       <div class="f-work">

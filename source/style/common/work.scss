@@ -4,12 +4,30 @@
 @import 'mixin/fonts';
 
 
+
+.info {
+  position: relative;
+  z-index: -1;
+  margin-top: -100px;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 650px;
+  background-image:  url("../img/bg.svg"), url("../img/bg.jpg");
+  background-position: center bottom, left top;
+  // background-image:  url("../img/bg.jpg");
+  // background-position: left top;
+  background-size: 110% cover;
+  background-repeat: no-repeat; 
+
+}
+
 .portfolio {
   position: relative;
   
   background-color: #faf8f0;
   &__header {
-
     position: absolute;
     top: -100px;
     left: 50%;
@@ -34,23 +52,25 @@
       margin-left: 5px;
       transform: rotateY(180deg);
     }
+    @include phone {
+      font-size: 35px;
+    }
   }
   &__left {
     float: left;
-
     min-height: 750px;
     display: flex;
-
     justify-content: center;
     align-items: center;
     align-content: center;
-    
-
-
     text-align: center;
     width: 50%;
     background-color: #f4f0e9;
-
+    @include phone {
+      float: none;
+      width: 100%;
+      min-height: 320px;
+    }
   }
   &__right {
     min-height: 750px;
@@ -64,6 +84,11 @@
     float: right;
     width: 50%;
     background-color: #ebe5db;
+    @include phone {
+      float: none;
+      width: 100%;
+      height: 100%;
+    }
   }
   &__work-name {
     color: #5d5954;
@@ -71,6 +96,9 @@
     font-size: 35px;
     text-transform: uppercase;
     margin-bottom: 40px;
+    @include phone {
+      font-size: 21px;
+    }
   }
   &__skill {
     height: 50px;
@@ -167,22 +195,32 @@
       margin-left: 5px;
       transform: rotateY(180deg);
     }
+    @include phone {
+      font-size: 35px;
+      width: 300px;
+    }
   }
 }
 .about__reviews {
   width: 700px;
   margin: 70px auto;
   font-size: 0;
+  @include phone {
+    margin: 20px auto;
+  }
 }
 .reviews { 
   &__list {
-    display: inline-block;
+    // display: inline-block;
   }
   &__item {
     float: left;
     width: 349px;
     font-size: 0;
     padding: 10px;
+    @include phone {
+      float: none;
+    }
   }
   &__text {
     position: relative;
@@ -251,8 +289,8 @@ img.bg-blur {
   filter: blur(20px);
   -webkit-filter: blur(20px);
   filter: url(#blur);
-
   overflow: hidden;
+
 }
 
 .blur:after {
@@ -268,6 +306,9 @@ img.bg-blur {
   height: 437px;
   border-radius: 5px;
   overflow: hidden;
+  @include phone {
+    width: 300px;
+  }
 }
 
 .center-block {
@@ -306,6 +347,9 @@ img.bg-blur {
       margin-left: 5px;
       transform: rotateY(180deg);
     }
+    @include phone {
+      font-size: 20px;
+    }
   }
   &__input {
     outline: none;
@@ -317,6 +361,9 @@ img.bg-blur {
     border: none;
     color: #373d41;
     margin-bottom: 20px;
+    @include phone {
+      width: 280px;
+    }
   }
   &__text {
     height: 140px;
@@ -329,6 +376,9 @@ img.bg-blur {
     color: #373d41;
     margin-bottom: 20px;
     resize: none;
+    @include phone {
+      width: 280px;
+    }
   }
   &__button {
     @include phone {

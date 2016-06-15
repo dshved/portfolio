@@ -1,35 +1,58 @@
 @import 'mixin/clearfix';
 
-.f-work {
-  padding: 30px;
-  height: 100%;
+.footer {
+  min-width: 320px;
+  position: relative; 
+  padding: 20px;
+  height: 150px;
   background-color: rgba(55, 61, 65, 0.8);
   &__copyright,
   &__menu,
   &__contact {
     width: 33.3333%;
-    height: 100%;
     float: left;
     padding-left: 30px;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
+    @include phone {
+      font-size: 14px;
+      text-align: center;
+      width: 100%;
+      float: none;
+      border-right: none;
+      padding-left: 0px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
   }
   &__copyright {
     padding-left: 0;
+
   }
   &__contact {
     border-right: none;
   }
   @include clearfix;
+
+  @include phone {
+    height: 350px;
+  }
 }
 
 
 .copyright__info {
   font-family: "RobotoLight";
+  margin-bottom: 15px;
+  @include phone {
+    margin-bottom: 10px;
+  }
 }
 
 .copyright__about {
   font-family: "RobotoLight";
   opacity: .5;
+  @include phone {
+    margin-bottom: 10px;
+  }
 }
 
 .footer-menu {
@@ -38,6 +61,10 @@
     display: inline-block;
     width: 100%;
     font-size: 0;
+    margin-bottom: 40px;
+    @include phone {
+      margin-bottom: 10px;
+    }
   }
   &__item {
     display: inline-block;
@@ -53,7 +80,9 @@
 }
 .social-menu {
   &__list {
-
+    @include phone {
+      margin-bottom: 10px;
+    }
   }
   &__item {
     display: inline-block;
@@ -61,7 +90,8 @@
   &__link {
     display: inline-block;
     margin-right: 25px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    transition: color .5s;
     &:hover {
       color: rgba(255, 255, 255, 1);
     }
@@ -72,6 +102,8 @@
   color: rgba(255, 255, 255, .5);
   &__item {
     margin-bottom: 2px;
+    font-family: "RobotoLight";
+    color: rgba(255, 255, 255, .5);
   }
   &__link {
     font-family: "RobotoLight";

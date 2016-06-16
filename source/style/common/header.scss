@@ -15,10 +15,16 @@
 		float: right;
 	}
 	@include clearfix;
+  @include phone {
+    padding: 0 20px;
+  }
 }
 }
 .navigation__menu {
   padding-top: 40px;
+  @include phone {
+    padding-top: 30px;
+  }
 }
 .navigation__social {
   
@@ -124,6 +130,12 @@
     font-weight: 400;
     text-align: center;
     @include phone {
+      font-size: 30px;
+    }
+    @include phoneL {
+      font-size: 30px;
+    }
+    @include tablet {
       font-size: 30px;
     }
   }

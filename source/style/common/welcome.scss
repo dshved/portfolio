@@ -69,9 +69,21 @@
     @include phone {
      height: 350px;
     }
+    @include phoneL {
+     height: 350px;
+    }
+    @include tablet {
+     height: 215px;
+    }
   }
   @include phone {
     margin-bottom: -350px;
+  }
+  @include phoneL {
+    margin-bottom: -350px;
+  }
+  @include tablet {
+    margin-bottom: -215px;
   }
 }
 .bg {
@@ -102,6 +114,10 @@
     margin-right: 0;
     float: none;
   }
+  @include phoneL {
+    margin-right: 0;
+    float: none;
+  }
 }
 
 .main {
@@ -109,11 +125,11 @@
 }
 
 .welcome {
+  visibility: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
   &__container {
   animation: flip3D .9s 1;
   transform-origin: 50% 0%;
@@ -121,6 +137,10 @@
     width: 380px;
     height: 395px;
     @include phone {
+      width: 290px;
+      height: 360px;
+    }
+    @include phoneL {
       width: 290px;
       height: 360px;
     }
@@ -157,6 +177,9 @@
   text-align: center;
   padding-top: 40px;
   @include phone {
+    padding-top: 20px;
+  }
+  @include phoneL {
     padding-top: 20px;
   }
   .user__img {
@@ -227,7 +250,10 @@
       font-family: "RobotoRegular";
       font-size: 16px;
       @include phone {
-        padding: 0 16px;
+        padding: 0 15px;
+      }
+      @include phoneL {
+        padding: 0 15px;
       }
       &:hover{
         background-color: #d18712;
@@ -271,6 +297,9 @@
   @include phone {
     padding: 30px 0px;
   }
+  @include phoneL {
+    padding: 30px 0px;
+  }
 }
 .input-group {
   position: relative;
@@ -299,6 +328,9 @@
   font-size: 16px;
   margin-bottom: 20px;
   @include phone {
+    width: 270px;
+  }
+  @include phoneL {
     width: 270px;
   }
 }
@@ -346,12 +378,18 @@ label {
   @include phone {
     width: 145px;
   }
+  @include phoneL {
+    width: 145px;
+  }
 }
 
 .button-group {
   margin-top: 37px;
   @include phone {
     margin-top: 26px;
+  }
+  @include phoneL {
+    margin-top: 19px;
   }
 }
 
@@ -363,5 +401,113 @@ label {
   }
   to {
     transform: perspective(800px);
+    opacity: 1;
   }
+}
+.copy {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-family: "RobotoRegular";
+  @include phoneL {
+    font-size: 14px;
+  }
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 20px; height: 20px;
+  border: none;
+  background: #e7a731;
+  border-radius: 5px;
+
+}
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 3px; left: 4px;
+  font-size: 18px;
+  line-height: 0.8;
+  color: #fff;
+  transition: all .2s;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+
+
+
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 20px; height: 20px;
+  border: none;
+  background: #fff;
+  border-radius: 50%;
+
+}
+
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+  content: '●';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: 24px;
+  line-height: 0.8;
+  color: #e7a731;
+
+  transition: all .2s;
+}
+
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
 }

@@ -1,0 +1,250 @@
+.info-blog {
+  position: relative;
+  z-index: -1;
+  margin-top: -100px;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 650px;
+  background-image:url("../img/bg.jpg");
+  background-position:left top;
+  background-size:cover;
+  background-repeat: no-repeat; 
+}
+.box-tranigle {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: -10px auto;
+  @include phone {
+    margin: -5px auto;
+  }
+  @include phoneL {
+    margin: -5px auto;
+  }
+}
+
+.blog-header {
+  position: relative;
+  width: 250px;
+  color: #fff;
+  margin: 0 auto;
+  font-family: "SansusWebissimoRegular", sans-serif;
+  font-size: 63px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+  &:before, &:after {
+    position: absolute;
+    margin-top: -7px;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 14px;
+    background-image: url('../img/ellipse_w.png');
+  }
+  &:before {
+    top: 50%;
+    left: 0;
+    margin-right: 5px;}
+  &:after {
+    top: 50%;
+    right: 0;
+
+    margin-left: 5px;
+    transform: rotateY(180deg);
+  }
+  @include phone {
+    width: 185px;
+    font-size: 35px;
+  }
+  @include phoneL {
+    width: 185px;
+    font-size: 35px;
+  }
+}
+
+.blog {
+    width: 100%;
+  background-color: #eeebdf;
+  &__inner {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 50px;
+    @include phone {
+      width: 320px;
+    }
+    @include phoneL {
+      width: 400px;
+    }
+    @include tablet {
+      width: 760px;
+    }
+    @include desctop {
+      width: 1020px;
+    }
+  }
+  &__content {
+    overflow: hidden;
+    width: 800px;
+    float: left;
+    @include phone {
+      width: 100%;
+    }
+    @include phoneL {
+      width: 100%;
+    }
+    @include tablet {
+      width: 100%;
+    }
+    @include desctop {
+      width: 720px;
+    }
+  }
+  @include clearfix;
+
+}
+
+.sidebar {
+  display: block;
+  float: left;
+  width: 300px;
+  height: 1px;
+  &__inner {
+    float: left;
+    width: 300px;
+  }
+  &__list {
+    margin-top: 10px;  
+    display: block;
+    text-align: right;
+    @include phone {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include phoneL {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__items {
+    display: table-row;
+    vertical-align: middle;
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    color: #5d5955;
+    &:visited {
+      color: #5d5955;
+    }
+    &:hover {
+      color: #cc881f;
+      transition: all .25s;
+    }
+    &:hover:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      content: '';
+      width: 2px;
+      height: 100%;
+      margin-right: -10px;
+      background-color: #cc881f;
+      transition: all .25s;
+    }
+  }
+  @include phone {
+    display: none;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: 100;
+    // display: block;
+    // width: 85%;
+    // height: 100%;
+    // background-color: #e7a731;
+    // box-shadow: 3px 0 3px rgba(0,0,0,.2);
+  }
+  @include phoneL {
+    display: none;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: 100;
+    // display: block;
+    // width: 85%;
+    // height: 100%;
+    // background-color: #e7a731;
+    // box-shadow: 3px 0 3px rgba(0,0,0,.2);
+  }
+  @include tablet {
+    display: none;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: 100;
+    // display: block;
+    // width: 85%;
+    // height: 100%;
+    // background-color: #e7a731;
+    // box-shadow: 3px 0 3px rgba(0,0,0,.2);
+  }
+  @include desctop {
+
+  }
+  @include clearfix;
+}
+
+.fixed {  position: fixed; top: 0; }
+
+.article {
+  display: block;
+  margin: 0 60px 70px;
+  @include phone {
+    margin: 0px 20px 30px;
+  }
+  @include phoneL {
+    margin: 0px 20px 30px;
+  }
+  &__header {
+    color: #5d5955;
+    font-family: "SansusWebissimoRegular", sans-serif;
+    font-size: 30px;
+    margin-bottom: 30px;
+    @include phone {
+      font-size: 21px;
+    }
+    @include phoneL {
+      font-size: 21px;
+    }
+  }
+  &__date {
+    opacity: .7;
+    color: #cc881f;
+    font-family: "RobotoRegular";
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  &__text {
+    color: #5d5955;
+    font-family: "RobotoRegular";
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  border-bottom: 4px solid rgba(#373d41,.1);
+  &:last-child {
+    border-bottom: none;
+  }
+}

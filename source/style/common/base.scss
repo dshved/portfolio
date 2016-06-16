@@ -17,12 +17,12 @@ body {
 
 a {
 	text-decoration: none;
-	
-	color: #fff;
-	&:visited {
-		color: #fff;
-	}
+
 }
+a:link { color: #fff; }
+a:visited { color: #fff; }
+a:hover { color: #fff; }
+a:active { color: #fff;}
 ul {
 	margin: 0;
 	padding: 0;

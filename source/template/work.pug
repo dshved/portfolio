@@ -16,20 +16,20 @@ html
           .user__desc Личный сайт веб-разработчик
       section.portfolio
         .portfolio__header Мои работы
-        .portfolio__container
+        .portfolio__big-slide
+          .slider__center
+                img(src="assets/img/work-1.png", alt="Сайт школы онлайн образования")
+        .portfolio__name
           .portfolio__left
             .w__container
               .portfolio__work-name Сайт школы онлайн образования
               .portfolio__skill HTML , CSS, JAVASCRIPT
               a.portfolio__link(href="#") #[i.fa.fa-link] Посмотреть сайт
-          .portfolio__right
-            .slider__container
-              .slider__center
-                img(src="assets/img/work-1.png", alt="Сайт школы онлайн образования")
-              .slider__left
-                img(src="assets/img/work-0.png", alt="Сайт школы онлайн образования")
-              .slider__right
-                img(src="assets/img/work-2.png", alt="Сайт школы онлайн образования")
+        .portfolio__small-slide
+          .slider__left
+            img(src="assets/img/work-0.jpg", alt="Сайт школы онлайн образования")
+          .slider__right
+            img(src="assets/img/work-2.jpg", alt="Сайт школы онлайн образования")
       section.about
         .about__header Что обо мне говорят
         .about__reviews

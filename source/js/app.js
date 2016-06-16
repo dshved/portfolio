@@ -47,6 +47,7 @@ $(document).ready(function(){
 
   setTimeout(function(){
     $( "#page-preloader" ).fadeOut( "slow" );
+    $( ".welcome" ).css('visibility', 'visible');
   }, 3000);
   
 
@@ -55,4 +56,16 @@ $(document).ready(function(){
     $(this).toggleClass('open');
     $('#overlay').toggleClass('open');
   });
+  var sidebar = $('.sidebar__inner');
+  var top = sidebar.offset().top - parseFloat(sidebar.css('margin-top'));
+
+  $(window).scroll(function (event) {
+    var y = $(this).scrollTop();
+    if (y >= top) {
+      sidebar.addClass('fixed');
+    } else {
+      sidebar.removeClass('fixed');
+    }
+  });
+
 });

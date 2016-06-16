@@ -29,6 +29,12 @@ $count: 315;
   @include phone {
     margin: -5px auto;
   }
+  @include phoneL {
+    margin: -5px auto;
+  }
+  @include tablet {
+    margin: -5px auto;
+  }
 }
 .skill {
   &__container{
@@ -43,6 +49,14 @@ $count: 315;
       float: none;
       width: 100%;
     }
+    @include phoneL {
+      float: none;
+      width: 100%;
+    }
+    @include tablet {
+      float: none;
+      width: 100%;
+    }
   }
   &__right {
     background: rgb(238, 235, 223);
@@ -54,19 +68,37 @@ $count: 315;
       width: 100%;
       padding: 0 10px;
     }
+    @include phoneL {
+      float: none;
+      width: 100%;
+      padding: 0 10px;
+    }
+    @include tablet {
+      float: none;
+      width: 100%;
+      padding: 0 50px;
+    }
   }
   &__user-pic {
     width: 350px;
     height: 350px;
     overflow: hidden;
     margin-bottom: 40px;
+    margin: 0 auto;
     img {
       overflow: hidden;
     }
     @include phone {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    @include phoneL {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    @include tablet {
+      margin: 0 auto;
+    }
   }
   &__header {
     position: relative;
@@ -106,12 +138,32 @@ $count: 315;
       padding-top: 20px;
       margin-bottom: 20px;
     }
+    @include phoneL {
+      width: 210px;
+      font-size: 21px;
+      padding-top: 20px;
+      margin-bottom: 20px;
+    }
+    @include tablet {
+      width: 210px;
+      font-size: 21px;
+      padding-top: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   &__items {
     position: relative;
     margin-bottom: 20px;
     @include phone {
+      text-align: center;
+      margin-bottom: 0;
+    }
+    @include phoneL {
+      text-align: center;
+      margin-bottom: 0;
+    }
+    @include tablet {
       text-align: center;
       margin-bottom: 0;
     }
@@ -134,8 +186,17 @@ $count: 315;
   @include phone {
     padding: 0;
   }
+  @include phoneL {
+    padding: 0;
+  }
+  @include tablet {
+    padding: 0 50px;
+  }
+
+
 }
 .skill__about-me {
+  margin-top: 20px;
   position: relative;
   width: 120px;
   color: #5d5955;
@@ -170,6 +231,12 @@ $count: 315;
   @include phone {
     margin-bottom: 20px;
   }
+  @include phoneL {
+    margin-bottom: 20px;
+  }
+  @include tablet {
+    margin-bottom: 20px;
+  }
 }
 .skill__about-desc {
   color: #5d5955;
@@ -178,7 +245,12 @@ $count: 315;
   @include phone {
     padding: 0 10px 20px;
   }
-
+  @include phoneL {
+    padding: 0 10px 20px;
+  }
+  @include tablet {
+    padding: 0 10px 20px;
+  }
 }
 .header-text {
   padding: 20px 0;
@@ -205,6 +277,12 @@ $count: 315;
       transform: rotateY(180deg);
     }
   @include phone {
+    font-size: 35px;
+  }
+  @include phoneL {
+    font-size: 35px;
+  }
+  @include tablet {
     font-size: 35px;
   }
 }
@@ -283,6 +361,12 @@ figure {
     @include phone {
       width: 320px;
     }
+    @include phoneL {
+      width: 320px;
+    }
+    @include tablet {
+      width: 320px;
+    }
   }
 }
 .contacts__header {
@@ -337,6 +421,12 @@ figure {
   width:100%;
   margin-bottom: -100px;
   @include phone {
+    height: 650px;
+  }
+  @include phoneL {
+    height: 650px;
+  }
+  @include tablet {
     height: 650px;
   }
 }

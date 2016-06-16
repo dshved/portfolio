@@ -35,13 +35,13 @@ var myModule = (function () {
 myModule.init();
 
 
-  // $(function(){
-  //       var x = 0;
-  //       setInterval(function(){
-  //           x-=1;
-  //           $('.wrapper').css('background-position', x + 'px 0');
-  //       }, 50);
-  //   })
+  $(function(){
+        var x = 0;
+        setInterval(function(){
+            x-=1;
+            $('.wrapper').css('background-position', x + 'px 0');
+        }, 50);
+    })
 
 $(document).ready(function(){
 

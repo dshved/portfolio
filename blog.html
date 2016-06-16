@@ -20,7 +20,81 @@
 <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
 <![endif]-->
     <div class="wrapper">
-      <header class="header"></header>
+      <header class="header">
+        <nav class="navigation">
+          <div class="navigation__social">
+            <div class="social-menu">
+              <ul class="social-menu__list">
+                <li class="social-menu__item"><a class="social-menu__link" href="#"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a></li>
+                <li class="social-menu__item"><a class="social-menu__link" href="#"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a></li>
+                <li class="social-menu__item"><a class="social-menu__link" href="#"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="navigation__menu">
+            <div id="nav-icon"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </nav>
+      </header>
+      <div class="overlay" id="overlay">
+        <nav class="overlay-menu">
+          <ul class="overlay-menu__list">
+            <li class="overlay-menu__item"><a class="overlay-menu__link" href="#">Мои работы</a></li>
+            <li class="overlay-menu__item"><a class="overlay-menu__link" href="#">Блог</a></li>
+            <li class="overlay-menu__item"><a class="overlay-menu__link" href="#">Обо мне</a></li>
+            <li class="overlay-menu__item"><a class="overlay-menu__link" href="#">Авторизация</a></li>
+          </ul>
+        </nav>
+      </div>
+      <section class="info-blog">
+        <div class="user__info">
+          <div class="user__img"><img src="assets/img/user.jpg" alt="Это я!"></div>
+          <div class="blog-header">Блог</div>
+          <div class="blog-desc">Статьи которые я написал</div>
+        </div>
+        <div class="box-tranigle">
+          <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+            <polygon fill="#eeebdf" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+            <polygon fill="#eeebdf" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+          </svg>
+        </div>
+      </section>
+      <section class="blog">
+        <div class="blog__inner">
+          <sidebar class="sidebar">
+            <div class="sidebar__inner">
+              <ul class="sidebar__list">
+                <li class="sidebar__items"><a class="sidebar__link" href="#">Самое важное в SASS</a></li>
+                <li class="sidebar__items"><a class="sidebar__link" href="#">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
+                <li class="sidebar__items"><a class="sidebar__link" href="#">Самый необходимый набор Gulp плагинов</a></li>
+                <li class="sidebar__items"><a class="sidebar__link" href="#"> Почему я выбрал Jade</a></li>
+              </ul>
+            </div>
+          </sidebar>
+          <div class="blog__content">
+            <article class="article" id="article">
+              <div class="article__header">Самое важное в SASS</div>
+              <div class="article__date">22 ноября 2016</div>
+              <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. <br>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+            </article>
+            <article class="article">
+              <div class="article__header">Самое важное в SASS</div>
+              <div class="article__date">22 ноября 2016</div>
+              <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. <br>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+            </article>
+            <article class="article">
+              <div class="article__header">Самое важное в SASS</div>
+              <div class="article__date">22 ноября 2016</div>
+              <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. <br>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+            </article>
+            <article class="article">
+              <div class="article__header">Самое важное в SASS</div>
+              <div class="article__date">22 ноября 2016</div>
+              <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. <br>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+            </article>
+          </div>
+        </div>
+      </section>
     </div>
     <footer class="footer">
       <div class="footer__copyright">
@@ -29,10 +103,10 @@
       </div>
       <div class="footer__menu">
         <ul class="footer-menu__list">
-          <li class="footer-menu__item"><a class="footer-menu__link" href="work.html" target="_blank">Мои работы</a></li>
-          <li class="footer-menu__item"><a class="footer-menu__link" href="about.html" target="_blank">Обо мне</a></li>
-          <li class="footer-menu__item"><a class="footer-menu__link" href="blog.html" target="_blank">Блог</a></li>
-          <li class="footer-menu__item"><a class="footer-menu__link" href="#" target="_blank">Авторизация</a></li>
+          <li class="footer-menu__item"><a class="footer-menu__link" href="work.html">Мои работы</a></li>
+          <li class="footer-menu__item"><a class="footer-menu__link" href="about.html">Обо мне</a></li>
+          <li class="footer-menu__item"><a class="footer-menu__link" href="blog.html">Блог</a></li>
+          <li class="footer-menu__item"><a class="footer-menu__link" href="#">Авторизация</a></li>
         </ul>
         <div class="social-menu">
           <ul class="social-menu__list">

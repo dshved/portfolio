@@ -1,0 +1,29 @@
+.card-auth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .card__login {
+    width: 380px;
+    height: 395px;
+    background-color: rgba(215, 191, 155, 0.6);
+    border-radius: 5px;
+    @include phone {
+      width: 290px;
+      height: 360px;
+    }
+    @include phoneL {
+      width: 290px;
+      height: 360px;
+    }
+  }
+}
+
+.btn-index {
+  padding: 10px;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom-left-radius: 5px;
+  border-right: 2px solid rgba(#dde3e7, .5);
+}

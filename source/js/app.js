@@ -7,7 +7,7 @@ var myModule = (function () {
 
   var _setUpListners = function () {
     $('.login-btn').on('click', _showLogin);
-    $('.footer').on('click', _showInfo);
+    $('.btn-index').on('click', _showInfo);
     $('.index').on('click', _showInfo);
 
   };
@@ -35,13 +35,13 @@ var myModule = (function () {
 myModule.init();
 
 
-  $(function(){
-        var x = 0;
-        setInterval(function(){
-            x-=1;
-            $('.wrapper').css('background-position', x + 'px 0');
-        }, 50);
-    })
+  // $(function(){
+  //       var x = 0;
+  //       setInterval(function(){
+  //           x-=1;
+  //           $('.wrapper').css('background-position', x + 'px 0');
+  //       }, 50);
+  //   })
 
 $(document).ready(function(){
 
@@ -68,4 +68,6 @@ $(document).ready(function(){
     }
   });
 
+  
+    
 });

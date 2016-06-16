@@ -18,14 +18,18 @@
     "gulp-csso": "^2.0.0",
     "gulp-eslint": "^2.0.0",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-imagemin": "^3.0.1",
     "gulp-load-plugins": "^1.2.4",
     "gulp-notify": "^2.2.0",
     "gulp-pug": "^3.0.3",
     "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
+    "highlight.js": "^9.4.0",
     "rimraf": "^2.5.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "highlight.js": "^9.4.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dshved/portfolio.git"

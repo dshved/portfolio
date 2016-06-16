@@ -184,6 +184,10 @@
     i {
       margin-right: 10px;
     }
+    &:visited {
+      color: #fff;
+    }
+    
     @include phone {
       margin-bottom: 10px;
     }

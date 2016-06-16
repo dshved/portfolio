@@ -384,12 +384,13 @@ label {
 }
 
 .button-group {
-  margin-top: 37px;
+  position: absolute;
+  bottom: 0;
   @include phone {
-    margin-top: 26px;
+    
   }
   @include phoneL {
-    margin-top: 19px;
+   
   }
 }
 
@@ -437,6 +438,7 @@ label {
   border: none;
   background: #e7a731;
   border-radius: 5px;
+  border: 2px solid #efefef;
 
 }
 
@@ -492,15 +494,16 @@ label {
 
 [type="radio"]:not(:checked) + label:after,
 [type="radio"]:checked + label:after {
-  content: '●';
+  content: '';
   position: absolute;
-  top: 2px;
-  left: 2px;
-  font-size: 24px;
-  line-height: 0.8;
+  top: 6px;
+  left: 4px;
   color: #e7a731;
-
   transition: all .2s;
+  width: 12px;
+  height: 12px;
+  background-color: #e7a731;
+  border-radius: 50%;
 }
 
 [type="radio"]:not(:checked) + label:after {

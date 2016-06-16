@@ -50,7 +50,7 @@ $(document).ready(function(){
     $( ".welcome" ).css('visibility', 'visible');
   }, 3000);
   
-
+  
 
   $('#nav-icon').click(function(){
     $(this).toggleClass('open');

@@ -76,16 +76,16 @@
     position: relative;
     padding-top: 50px;
     @include phone {
-      width: 320px;
+      width: 300px;
     }
     @include phoneL {
-      width: 400px;
+      width: 390px;
     }
     @include tablet {
-      width: 760px;
+      width: 750px;
     }
     @include desctop {
-      width: 1020px;
+      width: 1000px;
     }
   }
   &__content {
@@ -201,7 +201,7 @@
     // box-shadow: 3px 0 3px rgba(0,0,0,.2);
   }
   @include desctop {
-
+    width: 270px;
   }
   @include clearfix;
 }

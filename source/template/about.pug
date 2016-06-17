@@ -24,12 +24,11 @@ html
           .skill__left
             .about-cont
               .about-header
-                .header-text Обо мне
-            
+                .header-text Обо мне            
               .skill__user-pic
-                img(src="assets/img/user-2.jpg", alt="")
+                img(src="assets/img/me2.jpg", alt="")
               .skill__about-me Кто я
-              .skill__about-desc  Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+              .skill__about-desc  Я веб разработчик из Cанкт-Петербурга. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
           .skill__right
             .skill__header Чем я могу быть полезен
             .skill__desc Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
@@ -96,13 +95,25 @@ html
             .contacts__header Контакты
             ul.contacts__list
               li.contacts__item
-                a.contacts__link(href="skype:my_skype") #[i.fa.fa-skype.fa-2x]  my_skype
+                a.contacts__link(href="skype:live:dshved")
+                  span
+                    +icon('skype', 36,'contacts__link_fill')
+                    | live:dshved
               li.contacts__item
-                a.contacts__link(href="mailto:my_mail@mail.ru") #[i.fa.fa-envelope.fa-2x]  my_mail@mail.ru
+                a.contacts__link(href="mailto:dshved@hotmail.com")
+                  span
+                    +icon('envelope', 36,'contacts__link_fill')
+                    | dshved@hotmail.com
               li.contacts__item
-                a.contacts__link(href="tell:+455888787") #[i.fa.fa-phone.fa-2x]  +455888787
+                a.contacts__link(href="tell:+79816868636")
+                  span
+                    +icon('phone', 36,'contacts__link_fill')
+                    | +79816868636
               li.contacts__item
-                a.contacts__link(href="#mymap") #[i.fa.fa-map-marker.fa-2x] Мой адрес не дом и не улица
+                a.contacts__link(href="#mymap")
+                  span
+                    +icon('map_marker', 36,'contacts__link_fill')
+                    | Россия, Санкт-Петербург
           #mymap
           
       

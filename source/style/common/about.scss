@@ -86,6 +86,13 @@ $count: 315;
     margin-bottom: 40px;
     margin: 0 auto;
     img {
+      position:relative;
+    top:50%;
+    min-height:100%;
+    display:block;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    min-width:100%;
       overflow: hidden;
     }
     @include phone {
@@ -399,17 +406,20 @@ figure {
 }
 .contacts__item {
   color: rgb(133, 131, 128);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .contacts__link {
   display: inline-block;
-  height: 25px;
-  line-height: 25px;
   color: rgb(133, 131, 128);
-  vertical-align: middle;
-  i {
+  &:hover {
+      text-decoration: underline;
+    }
+  &_fill {
+    vertical-align: middle;
     margin-right: 10px;
-    color: #e6ab3d;
+    fill: #e6ab3d;
+    
+
   }
   &:link {
     color: rgb(133, 131, 128);
@@ -417,6 +427,7 @@ figure {
   &:visited {
     color: rgb(133, 131, 128);
   }
+  
 }
 
 #mymap {

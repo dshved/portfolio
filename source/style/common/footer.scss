@@ -157,10 +157,11 @@
   &__link {
     display: inline-block;
     margin-right: 25px;
-    color: rgba(255, 255, 255, 0.8);
-    transition: color .5s;
+    fill: rgba(255, 255, 255, 0.6);
+    transition: all .5s;
     &:hover {
-      color: rgba(255, 255, 255, 1);
+      fill: rgba(255, 255, 255, 1);
+      transition: all .5s;
     }
   }
 }

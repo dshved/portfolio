@@ -28,6 +28,7 @@ $.gulp.task('deploy', function() {
 
 $.gulp.task('default', $.gulp.series(
 	'clean',
+	'svg.sprite',
 	$.gulp.parallel(
 		'sass',
 		'pug',

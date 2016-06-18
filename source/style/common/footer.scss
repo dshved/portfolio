@@ -76,12 +76,15 @@
   @include clearfix;
 
   @include phone {
+    padding: 10px;
     height: 350px;
   }
   @include phoneL {
+    padding: 10px;
     height: 350px;
   }
   @include tablet {
+    padding: 10px;
     height: 215px;
   }
 }

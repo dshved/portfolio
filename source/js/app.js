@@ -51,11 +51,13 @@ $(document).ready(function(){
   }, 3000);
   
   
-
+  //Меню навигации
   $('#nav-icon').click(function(){
     $(this).toggleClass('open');
     $('#overlay').toggleClass('open');
   });
+
+  //Sidebar blog
   var sidebar = $('.sidebar__inner');
   var top = sidebar.offset().top - parseFloat(sidebar.css('margin-top'));
 

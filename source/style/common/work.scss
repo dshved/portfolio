@@ -47,13 +47,13 @@
     float: right;
     @include phone {
       width: 100%;
-      height: auto;
+      height: 300px;
       float: none;
     }
     @include phoneL {
       width: 100%;
       float: none;
-      height: auto;
+      height: 300px;
     }
   }
   &__small-slide {
@@ -64,12 +64,12 @@
     @include phone {
       width: 100%;
       float: none;
-      height: auto;
+      height: 160px;
     }
     @include phoneL {
       width: 100%;
       float: none;
-      height: auto;
+      height: 160px;
     }
   }
   &__header {

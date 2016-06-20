@@ -11,6 +11,34 @@
   background-position:left top;
   background-size:cover;
   background-repeat: no-repeat; 
+  .user__img {
+    position: relative;
+    left: 50%;
+    width: 141px;
+    height: 141px;
+    margin-left: -70px;
+    margin-bottom: 20px;
+    border-radius: 50% 50%;
+    background-clip: padding-box;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .user__name {
+    margin-bottom: 5px;
+    color: #fff;
+    font-family: "RobotoMedium";
+    font-size: 28px;
+  }
+  .user__desc {
+    margin-bottom: 25px;
+    opacity: .8;
+    color: #fff;
+    font-family: "RobotoRegular";
+    font-size: 16px;
+  }
+  
 }
 .box-tranigle {
   width: 100%;
@@ -68,29 +96,29 @@
 }
 
 .blog {
-    width: 100%;
+  width: 100%;
   background-color: #eeebdf;
   &__inner {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
-    position: relative;
+    /*position: relative;*/
     padding-top: 50px;
     @include phone {
       width: 300px;
     }
     @include phoneL {
-      width: 390px;
+      width: 100%;
     }
     @include tablet {
-      width: 750px;
+      width: 100%;
     }
     @include desctop {
-      width: 1000px;
+      width: 100%;
     }
   }
   &__content {
     overflow: hidden;
-    width: 800px;
+    width: 70%;
     float: left;
     @include phone {
       width: 100%;
@@ -102,7 +130,7 @@
       width: 100%;
     }
     @include desctop {
-      width: 720px;
+      width: 70%;
     }
   }
   @include clearfix;
@@ -195,18 +223,25 @@
     // left: 0;
     // z-index: 100;
     // display: block;
-    // width: 85%;
+    // width: 330px;
     // height: 100%;
     // background-color: #e7a731;
     // box-shadow: 3px 0 3px rgba(0,0,0,.2);
   }
   @include desctop {
-    width: 270px;
+    width: 30%;
   }
   @include clearfix;
 }
 
-.fixed {  position: fixed; top: 0; }
+.fixed {  
+  position: fixed; 
+  top: 0; 
+  @include tablet {
+    position: relative;
+    top: auto;
+  }
+}
 
 .article {
   display: block;

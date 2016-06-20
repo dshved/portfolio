@@ -1,3 +1,4 @@
+
 #page-preloader {
   position: fixed;
   left: 0;
@@ -53,6 +54,12 @@
   }
 }
 
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .wrapper {
   position: relative;
   min-height: 100%;
@@ -471,6 +478,7 @@ label {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
+  padding-bottom: 5px;
 }
 
 
@@ -481,7 +489,8 @@ label {
   content: '';
   position: absolute;
   left:0; top: 2px;
-  width: 20px; height: 20px;
+  width: 21px; 
+  height: 21px;
   border: none;
   background: #fff;
   border-radius: 50%;
@@ -496,8 +505,8 @@ label {
   left: 4px;
   color: #e7a731;
   transition: all .2s;
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   background-color: #e7a731;
   border-radius: 50%;
 }

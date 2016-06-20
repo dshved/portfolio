@@ -48,8 +48,19 @@ $(document).ready(function(){
   setTimeout(function(){
     $( "#page-preloader" ).fadeOut( "slow" );
     $( ".welcome" ).css('visibility', 'visible');
-  }, 3000);
+  }, 4000);
   
+  $('.counter').each(function () {
+    $(this).prop('Counter',0).animate({
+      Counter: $(this).text()
+    }, {
+      duration: 4000,
+      easing: 'swing',
+      step: function (now) {
+          $(this).text(Math.ceil(now) + '%');
+      }
+    });
+  });
   
   //Меню навигации
   $('#nav-icon').click(function(){

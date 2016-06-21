@@ -123,59 +123,71 @@
   }
 }
 
-.main {
 
-}
-
-.welcome {
-  visibility: hidden;
+.flip {
+  width: 380px;
+  height: 395px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  &__container {
-  animation: flip3D .9s 1;
-  transform-origin: 50% 0%;
-  animation-delay: 3s;
-    width: 380px;
-    height: 395px;
-    @include phone {
-      width: 290px;
-      height: 360px;
-    }
-    @include phoneL {
-      width: 290px;
-      height: 360px;
-    }
-    transform-style: preserve-3d;
-    transition: transform 1s;
-    transition: transform 1s, -webkit-transform 1s;
-    &.flipped {
-      transform: rotateY(180deg);
-    }
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  perspective: 1000px;
+  animation: flip3D .9s;
+  animation-delay: 4s;
+  transform-origin: 50% 0;
+  @include phone {
+    width: 290px;
+    height: 360px;
   }
-  &__container &__front {
-    z-index: 2;
+  @include phoneL {
+    width: 290px;
+    height: 360px;
   }
-  &__container &__back {
-    background-color: rgba(215, 191, 155, 0.6);
-    transform: rotateY(180deg);
-  }
-  &__block {
-    user-select: none;
-    background-color: rgba(215, 191, 155, 0.6);
-    border-radius: 5px;
-    margin: 0;
-    display: block;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
 }
 
+.flip.flipping .flip__back {   
+  transform: rotateY(0deg);
+}
+.flip.flipping .flip__front {
+  transform: rotateY(180deg);
+}
+
+.flip__front, .flip__back {
+  transition: 0.9s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  background-color: rgba(215, 191, 155, 0.6); 
+  position: absolute;
+  top:0;
+  left:0;
+  width: 380px;
+  height: 395px;
+  border-radius: 5px;
+  @include phone {
+    width: 290px;
+    height: 360px;
+  }
+  @include phoneL {
+    width: 290px;
+    height: 360px;
+  }
+}
+
+.flip__front {
+  z-index: 2; 
+  transform: rotateY(0deg);  
+}
+.flip__back { 
+  overflow: hidden;
+  transform: rotateY(-180deg);
+}
+
+
+.card__login {
+  text-align: center;
+}
 .user__info {
   text-align: center;
   padding-top: 40px;
@@ -307,6 +319,8 @@
 .input-group {
   position: relative;
   text-align: center;
+  margin: 0 15px;
+
 }
 .input-group-addon {
   position: absolute;

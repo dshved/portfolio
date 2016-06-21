@@ -9,19 +9,18 @@ var myModule = (function () {
     $('.login-btn').on('click', _showLogin);
     $('.btn-index').on('click', _showInfo);
     $('.index').on('click', _showInfo);
-
   };
 
   var _showLogin = function (e) {
     e.preventDefault();
-    $('.welcome__container').toggleClass('flipped');
+    $('.flip').toggleClass('flipping');
     $('.login-btn').css({
       'visibility': 'hidden'
     });
   };
  
   var _showInfo = function (e) {
-    $('.welcome__container').removeClass('flipped');
+    $('.flip').removeClass('flipping');
     $('.login-btn').css({
       'visibility': 'visible'
     });
@@ -44,7 +43,6 @@ myModule.init();
   //   })
 
 $(document).ready(function(){
-
   setTimeout(function(){
     $( "#page-preloader" ).fadeOut( "slow" );
     $( ".welcome" ).css('visibility', 'visible');
@@ -81,6 +79,7 @@ $(document).ready(function(){
     }
   });
 
-  
-    
+
 });
+
+  

@@ -65,7 +65,15 @@
           <div class="user__img"><img src="assets/img/user.jpg" alt="Это я!"></div>
           <div class="blog-header">Блог</div>
           <div class="blog-desc">Статьи которые я написал</div>
-        </div>
+          <div class="blog-pic">
+                <svg class="icon icon-blog_header icon- ">
+                  <use xlink:href="assets/img/sprite.svg#blog_header"></use>
+                </svg>
+          </div>
+        </div><a class="goto" href="#blog">
+              <svg class="icon icon-arrow_down icon-26 ">
+                <use xlink:href="assets/img/sprite.svg#arrow_down"></use>
+              </svg></a>
         <div class="box-tranigle">
           <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
             <polygon fill="#eeebdf" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
@@ -73,7 +81,7 @@
           </svg>
         </div>
       </section>
-      <section class="blog">
+      <section class="blog" id="blog">
         <div class="blog__inner">
           <sidebar class="sidebar">
             <div class="sidebar__inner">

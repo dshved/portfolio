@@ -153,30 +153,47 @@
       position: relative;
       opacity: 0;
       .overlay-menu__link {
+        position: relative;
         text-transform: uppercase;
-        display: block;
         position: relative;
         color: #fff;
         text-decoration: none;
         overflow: hidden;
         transition: all .3s;
-        &:hover:before,
-        &:hover:after {
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: -80px;
           content: '';
-          display: inline-block;
-          vertical-align: middle;
+          display: block;
           width: 40px;
           height: 14px;
-          opacity: .8;
+          margin-top: -7px;
+          opacity: 0;
           transition: all .3s;
           background-image: url('../img/ellipse_w.png');
         }
         &:hover:before {
-          margin-right: 10px;
+          left: -50px;
+          opacity: .8;
+        }
+        &:after {
+          position: absolute;
+          top: 50%;
+          right: -80px;
+          content: '';
+          display: block;
+          width: 40px;
+          height: 14px;
+          margin-top: -7px;
+          opacity: 0;
+          transition: all .3s;
+          background-image: url('../img/ellipse_w.png');
+          transform: rotateY(180deg);
         }
         &:hover:after {
-          margin-left: 10px;
-          transform: rotateY(180deg);
+          right: -50px;
+          opacity: .8;
         }
       }
     }

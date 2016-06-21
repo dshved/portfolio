@@ -14,8 +14,14 @@ html
             img(src="assets/img/user.jpg", alt="Это я!")
           .user__name Дмитрий Швед
           .user__desc Личный сайт веб-разработчик
-      section.portfolio
+          .info-pic_work
+            +icon('portfolio_header')
+        //- a(href="#portfolio").goto
+        //-   +icon('arrow_down', 26)
+      section.portfolio#portfolio
         .portfolio__header Мои работы
+          .portfolio-pic_work
+            +icon('works_header')
         .portfolio__big-slide
           .slider__center
                 img(src="assets/img/slide-1.png", alt="Сайт школы онлайн образования")
@@ -34,6 +40,8 @@ html
               img(src="assets/img/slide-3.png", alt="Сайт школы онлайн образования")
       section.about
         .about__header Что обо мне говорят
+          .about-pic_work
+            +icon('about_header')
         .about__reviews
           ul.reviews__list
             li.reviews__item

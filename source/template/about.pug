@@ -15,17 +15,22 @@ html
             img(src="assets/img/user.jpg", alt="Это я!")
           .user__name Дмитрий Швед
           .user__desc Личный сайт веб-разработчик
+          .info-pic
+            +icon('portfolio_header')
+        a(href="#skill").goto
+          +icon('arrow_down', 26)
         .box-tranigle
           svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
             polygon(fill='#efeedf' points='0,0   0,86   500.8,86   500.8,75.5')
             polygon(fill='#eeebdf' points='1000,0   1000,86   500,86   500,75.5')
-      section.skill
-
+      section.skill#skill
           .skill__container
             .skill__left
               .about-cont
                 .about-header
-                  .header-text Обо мне            
+                  .header-text Обо мне
+                  .header-pic
+                    +icon('about_header')
                 .skill__user-pic
                   img(src="assets/img/me2.jpg", alt="")
                 .skill__about-me Кто я

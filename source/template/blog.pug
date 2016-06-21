@@ -16,11 +16,15 @@ html
             img(src="assets/img/user.jpg", alt="Это я!")
           .blog-header Блог
           .blog-desc Статьи которые я написал
+          .blog-pic
+            +icon('blog_header')
+        a(href="#blog").goto
+          +icon('arrow_down', 26)
         .box-tranigle
           svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
             polygon(fill='#eeebdf' points='0,0   0,86   500.8,86   500.8,75.5')
             polygon(fill='#eeebdf' points='1000,0   1000,86   500,86   500,75.5')
-      section.blog
+      section.blog#blog
         .blog__inner
           sidebar.sidebar
             .sidebar__inner

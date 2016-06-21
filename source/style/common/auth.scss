@@ -1,3 +1,9 @@
+.bg-auth {
+  background: url('../img/bg.jpg') top left;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
 .card-auth {
   position: absolute;
   top: 50%;
@@ -28,8 +34,30 @@
   border-right: 2px solid rgba(#dde3e7, .5);
 }
 
+.goto {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  width: 26px;
+  bottom: 150px;
+  left: 50%;
+  margin-left: -13px;
+  fill: #fff;
+  animation: upp 2s infinite;
+  &:hover {
+    fill: rgba(#e7a731, .9);
+  }
+}
 
 
-.fill {
-  fill: red;
+@keyframes upp {
+  from {
+    bottom: 150px;
+  }
+  50% {
+    bottom: 170px;
+  }
+  to {
+    bottom: 150px;
+  }
 }

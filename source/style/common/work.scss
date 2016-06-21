@@ -1,21 +1,17 @@
-
 .info {
   position: relative;
-  z-index: -1;
   margin-top: -100px;
   padding-top: 100px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-image:  url("../img/bg.svg"), url("../img/bg.jpg");
+  background-image: url("../img/bg.svg"), url("../img/bg.jpg");
   background-position: center bottom, left top;
-  // background-image:  url("../img/bg.jpg");
-  // background-position: left top;
-  background-size: 110%, cover;
-  background-repeat: no-repeat; 
-
+  background-size: 150%, cover;
+  background-repeat: no-repeat;
   .user__info {
+    z-index: 2;
     text-align: center;
     padding-top: 51px;
     @include phone {
@@ -26,6 +22,7 @@
     }
     .user__img {
       position: relative;
+      z-index: 2;
       left: 50%;
       width: 141px;
       height: 141px;
@@ -39,13 +36,16 @@
       }
     }
     .user__name {
+      position: relative;
+      z-index: 2;
       margin-bottom: 5px;
       color: #fff;
       font-family: "RobotoMedium";
       font-size: 33px;
     }
-
     .user__desc {
+      position: relative;
+      z-index: 2;
       margin-bottom: 25px;
       opacity: .8;
       color: #fff;
@@ -53,10 +53,70 @@
       font-size: 16px;
     }
   }
+  @include phone {}
+}
+
+.portfolio-pic_work {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: rgba(#cd8920, .08);
   @include phone {
-
+    width: 250px;
+    height: 53px;
   }
+  @include phoneL {
+    width: 250px;
+    height: 53px;
+  }
+  @include tablet {
+    width: 260px;
+    height: 100px;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
 
+.info-pic_work {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  fill: rgba(#cd8920, .2);
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.about-pic_work {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: rgba(#cd8920, .05);
+  z-index: -1;
+  @include phone {
+    width: 300px;
+    height: 200px;
+  }
+  @include phoneL {
+    width: 400px;
+    height: 250px;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .portfolio {
@@ -113,7 +173,8 @@
   }
   &__header {
     position: absolute;
-    top: -100px;
+    z-index: 2;
+    top: -145px;
     left: 50%;
     width: 500px;
     margin-left: -250px;
@@ -122,7 +183,8 @@
     font-size: 63px;
     text-transform: uppercase;
     text-align: center;
-    &:before, &:after {
+    &:before,
+    &:after {
       content: '';
       display: inline-block;
       vertical-align: middle;
@@ -131,7 +193,9 @@
       opacity: .5;
       background-image: url('../img/ellipse_b.png');
     }
-    &:before {margin-right: 5px;}
+    &:before {
+      margin-right: 5px;
+    }
     &:after {
       margin-left: 5px;
       transform: rotateY(180deg);
@@ -140,11 +204,19 @@
       width: 300px;
       font-size: 35px;
       margin-left: -150px;
+      top: -40px;
+      font-size: 35px;
     }
     @include phoneL {
       width: 300px;
       font-size: 35px;
       margin-left: -150px;
+      top: -40px;
+      font-size: 35px;
+    }
+    @include tablet {
+      top: -68px;
+      font-size: 45px;
     }
   }
   &__left {
@@ -168,7 +240,7 @@
       height: 190px;
     }
   }
-/*   &__right {
+  /*   &__right {
   height: 100%;
   text-align: center;
   float: right;
@@ -233,13 +305,10 @@
     &:hover {
       background-color: #cd8920;
     }
-    
     @include phone {
-      
       margin-bottom: 10px;
     }
     @include phoneL {
-
       margin-bottom: 10px;
     }
   }
@@ -251,7 +320,6 @@
   }
   @include clearfix;
 }
-
 
 .slider {
   &__container {
@@ -295,10 +363,10 @@
       margin: auto;
     }
     @include phone {
-      height: 114px;
+      height: 160px;
     }
     @include phoneL {
-      height: 114px;
+      height: 160px;
     }
   }
   &__right {
@@ -320,10 +388,10 @@
       margin: auto;
     }
     @include phone {
-      height: 114px;
+      height: 160px;
     }
     @include phoneL {
-      height: 114px;
+      height: 160px;
     }
   }
   &__link-left {
@@ -337,11 +405,11 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      z-index: 6;    
-      background: rgba(195, 189, 174, 0.7); 
+      z-index: 6;
+      background: rgba(195, 189, 174, 0.7);
     }
     &:hover:after {
-      background: rgba(195, 189, 174, 0.5); 
+      background: rgba(195, 189, 174, 0.5);
     }
     &:before {
       content: '';
@@ -373,11 +441,11 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      z-index: 6; 
-      background: rgba(195, 189, 174, 0.7);  
+      z-index: 6;
+      background: rgba(195, 189, 174, 0.7);
     }
     &:hover:after {
-      background: rgba(195, 189, 174, 0.5); 
+      background: rgba(195, 189, 174, 0.5);
     }
     &:before {
       content: '';
@@ -400,6 +468,7 @@
     }
   }
 }
+
 .about {
   padding-top: 70px;
   position: relative;
@@ -414,7 +483,8 @@
     font-size: 63px;
     text-transform: uppercase;
     text-align: center;
-    &:before, &:after {
+    &:before,
+    &:after {
       position: absolute;
       margin-top: -7px;
       content: '';
@@ -428,11 +498,11 @@
     &:before {
       top: 50%;
       left: 0;
-      margin-right: 5px;}
+      margin-right: 5px;
+    }
     &:after {
       top: 50%;
       right: 0;
-
       margin-left: 5px;
       transform: rotateY(180deg);
     }
@@ -446,6 +516,7 @@
     }
   }
 }
+
 .about__reviews {
   width: 700px;
   margin: 70px auto;
@@ -459,7 +530,8 @@
     width: 100%;
   }
 }
-.reviews { 
+
+.reviews {
   &__list {
     @include clearfix;
   }
@@ -485,7 +557,6 @@
     padding-top: 60px;
     font-size: 16px;
     text-overflow: ellipsis;
-
     i {
       position: absolute;
       top: 0;
@@ -502,7 +573,7 @@
       border-radius: 50%;
       overflow: hidden;
     }
-    .user-info{
+    .user-info {
       margin-top: 18px;
       font-family: "RobotoBold";
       color: #cc891f;
@@ -545,7 +616,6 @@ img.bg-blur {
   -webkit-filter: blur(20px);
   filter: url(#blur);
   overflow: hidden;
-
 }
 
 .blur:after {
@@ -572,10 +642,9 @@ img.bg-blur {
 .center-block {
   position: relative;
   margin: 0 auto;
-
 }
-.feedback {
 
+.feedback {
   &__form {
     text-align: center;
     position: absolute;
@@ -584,13 +653,15 @@ img.bg-blur {
     left: 0;
   }
   &__header {
-    padding: 0px 0;
+    padding-top: 27px;
+    margin-bottom: 32px;
     text-align: center;
     color: rgb(93, 90, 85);
     font-family: "SansusWebissimoRegular", sans-serif;
     font-size: 35px;
     text-transform: uppercase;
-    &:before, &:after {
+    &:before,
+    &:after {
       content: '';
       display: inline-block;
       vertical-align: middle;
@@ -599,7 +670,6 @@ img.bg-blur {
       background-image: url('../img/ellipse.png');
     }
     &:before {
-
       margin-right: 5px;
     }
     &:after {
@@ -652,17 +722,20 @@ img.bg-blur {
     position: absolute;
     bottom: 0;
     left: 0;
-
-/*     @include phone {
-  margin-top: 26px;
-}
-@include phoneL {
-  margin-top: 26px;
-} */
+    @include phone {
+      .btn {
+        width: 150px;
+      }
+    }
+    @include phoneL {
+      .btn {
+        width: 150px;
+      }
+    }
     @include clearfix;
   }
   &__btn_left {
-    border-right: 2px solid rgba(221, 227, 231, 0.5) ;
+    border-right: 2px solid rgba(221, 227, 231, 0.5);
     border-bottom-left-radius: 5px;
   }
   &__btn_right {

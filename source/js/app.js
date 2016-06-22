@@ -83,6 +83,12 @@ $(document).ready(function() {
     $('#overlay').toggleClass('open');
   });
 
+  //Sidebar
+  $('.sidebar__inner').click(function () {
+    $('.sidebar').toggleClass('sidebar__active');
+  });
+
+
   //Sidebar blog
   var sidebar = $('.sidebar__inner');
   var top = sidebar.offset().top - parseFloat(sidebar.css('margin-top'));

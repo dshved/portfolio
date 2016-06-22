@@ -168,22 +168,82 @@
   &__inner {
     float: left;
     width: 300px;
+    @include phone {
+    width: 270px;
+    position: fixed;
+    top: 30%;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -45px;
+        width: 30px;
+        height: 50px;
+        margin-top: -25px;
+        background-color: #e7a731;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 55;
+        box-shadow: 3px 0 3px rgba(0,0,0,.2);
+      }
+    }
+    @include phoneL {
+    width: 270px;
+    position: fixed;
+    top: 30%;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -45px;
+        width: 30px;
+        height: 50px;
+        margin-top: -25px;
+        background-color: #e7a731;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 55;
+        box-shadow: 3px 0 3px rgba(0,0,0,.2);
+      }
+    }
+    @include tablet {
+    width: 270px;
+    position: fixed;
+    top: 30%;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -45px;
+        width: 30px;
+        height: 50px;
+        margin-top: -25px;
+        background-color: #e7a731;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 55;
+        box-shadow: 3px 0 3px rgba(0,0,0,.2);
+      }
+    }
   }
   &__list {
     margin-top: 10px;
     display: block;
     text-align: right;
     @include phone {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
     }
     @include phoneL {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
     }
   }
   &__items {
@@ -214,42 +274,69 @@
       background-color: #cc881f;
       transition: all .25s;
     }
+    @include phone {
+      color: rgba(#fff, .8);
+      &:visited {
+        color: rgba(#fff, .8);
+      }
+      &:hover {
+        color: rgba(#fff, .8);
+        transition: all .25s;
+      }
+    }
+    @include phoneL {
+      color: rgba(#fff, .8);
+      &:visited {
+        color: rgba(#fff, .8);
+      }
+      &:hover {
+        color: rgba(#fff, .8);
+        transition: all .25s;
+      }
+    }
+    @include tablet {
+      color: rgba(#fff, .8);
+      &:visited {
+        color: rgba(#fff, .8);
+      }
+      &:hover {
+        color: rgba(#fff, .8);
+        transition: all .25s;
+      }
+    }
   }
   @include phone {
-    display: none;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // z-index: 100;
-    // display: block;
-    // width: 85%;
-    // height: 100%;
-    // background-color: #e7a731;
-    // box-shadow: 3px 0 3px rgba(0,0,0,.2);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    background-color: #e7a731;
+    box-shadow: 3px 0 3px rgba(0,0,0,.2);
+    height: 100%;
+    z-index: 101;
+    transition: all .5s;
   }
   @include phoneL {
-    display: none;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // z-index: 100;
-    // display: block;
-    // width: 85%;
-    // height: 100%;
-    // background-color: #e7a731;
-    // box-shadow: 3px 0 3px rgba(0,0,0,.2);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    background-color: #e7a731;
+    box-shadow: 3px 0 3px rgba(0,0,0,.2);
+    height: 100%;
+    z-index: 50;
+    transition: all .5s;
   }
   @include tablet {
-    display: none;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // z-index: 100;
-    // display: block;
-    // width: 330px;
-    // height: 100%;
-    // background-color: #e7a731;
-    // box-shadow: 3px 0 3px rgba(0,0,0,.2);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    background-color: #e7a731;
+    box-shadow: 3px 0 3px rgba(0,0,0,.2);
+    height: 100%;
+    z-index: 50;
+    transition: all .5s;
   }
   @include desctop {
     width: 30%;
@@ -257,12 +344,21 @@
   @include clearfix;
 }
 
+.sidebar__active {
+  left: 0;
+}
+
 .fixed {
   position: fixed;
   top: 0;
+  @include phone {
+    top: 30%;
+  }
+  @include phoneL {
+    top: 30%;
+  }
   @include tablet {
-    position: relative;
-    top: auto;
+    top: 30%;
   }
 }
 

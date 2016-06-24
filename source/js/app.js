@@ -9,6 +9,7 @@ var myModule = (function() {
     $('.login-btn').on('click', _showLogin);
     $('.btn-index').on('click', _showInfo);
     $('.index').on('click', _showInfo);
+    $('.wrapper.bg').on('click', _backgroundClick);
   };
 
   var _showLogin = function(e) {
@@ -20,10 +21,21 @@ var myModule = (function() {
   };
 
   var _showInfo = function(e) {
+    e.preventDefault();
     $('.flip').removeClass('flipping');
     $('.login-btn').css({
       'visibility': 'visible'
     });
+  };
+
+  var _backgroundClick = function(e) {
+    e.preventDefault();
+    if (e.target.className == 'wrapper bg') {
+      $('.flip').removeClass('flipping');
+      $('.login-btn').css({
+        'visibility': 'visible'
+      });
+    }
   };
 
   return {
@@ -44,6 +56,10 @@ myModule.init();
 
 
 $(document).ready(function() {
+
+   
+
+
   
   //Медленный скролл
   $('a[href*="#"]:not([href="#"])').click(function() {

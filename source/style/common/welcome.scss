@@ -203,10 +203,9 @@
   }
   .user__img {
     position: relative;
-    left: 50%;
+    margin: 0 auto;
     width: 141px;
-    height: 141px;
-    margin-left: -70px;
+    height: 141px;  
     margin-bottom: 9px;
     border-radius: 50% 50%;
     background-clip: padding-box;
@@ -229,10 +228,10 @@
     font-size: 16px;
   }
   .social__list {
-    .list__item {
+    .social__item {
       display: inline-block;
       margin-right: 25px;
-      .item__link {
+      .social__link {
         display: block;
         color: #fff;
         opacity: .7;

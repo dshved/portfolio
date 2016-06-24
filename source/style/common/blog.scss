@@ -167,8 +167,10 @@
   height: 1px;
   &__inner {
     float: left;
-    width: 300px;
+    // width: 300px;
+    margin: 0 10px;
     @include phone {
+    margin: 0;
     width: 270px;
     position: fixed;
     top: 30%;
@@ -189,6 +191,7 @@
       }
     }
     @include phoneL {
+    margin: 0;
     width: 270px;
     position: fixed;
     top: 30%;
@@ -209,6 +212,7 @@
       }
     }
     @include tablet {
+      margin: 0;
     width: 270px;
     position: fixed;
     top: 30%;
@@ -230,6 +234,7 @@
     }
   }
   &__list {
+    width: 270px;
     margin-top: 10px;
     display: block;
     text-align: right;
@@ -350,14 +355,18 @@
 
 .fixed {
   position: fixed;
+  width: 30%;
   top: 0;
   @include phone {
     top: 30%;
+    width: 270px;
   }
   @include phoneL {
     top: 30%;
+    width: 270px;
   }
   @include tablet {
+    width: 270px;
     top: 30%;
   }
 }

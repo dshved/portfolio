@@ -29,8 +29,9 @@ var myModule = (function() {
   };
 
   var _backgroundClick = function(e) {
-    e.preventDefault();
-    if (e.target.className == 'wrapper bg') {
+
+    if (e.target.className === 'wrapper bg') {
+    	console.log(e.target.className);
       $('.flip').removeClass('flipping');
       $('.login-btn').css({
         'visibility': 'visible'

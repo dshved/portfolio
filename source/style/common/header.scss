@@ -17,7 +17,9 @@
     }
   }
 }
-
+.overflow {
+  overflow: hidden;
+}
 .navigation__menu {
   padding-top: 28px;
   @include phone {

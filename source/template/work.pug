@@ -31,11 +31,33 @@ body
             a.portfolio__link(href="http://loftschool.com" target="_blank") #[i.fa.fa-link] Посмотреть сайт
       .portfolio__small-slide
         .slider__left
-          a.slider__link-left(href="#")
-            img(src="assets/img/slide-2.png", alt="Сайт школы онлайн образования")
+          .slider
+            .slider__prev
+              ul.slider__list
+                li.slider__item
+                  img(src="assets/img/slide-1.png" alt="")
+                li.slider__item
+                  img(src="assets/img/slide-2.png" alt="")
+                li.slider__item
+                  img(src="assets/img/slide-3.png" alt="")
+                li.slider__item.active
+                  img(src="assets/img/slide-4.png" alt="")
+            .slider__controls
+              a.slider__link-left(href="#")
         .slider__right
-          a.slider__link-right(href="#")
-            img(src="assets/img/slide-3.png", alt="Сайт школы онлайн образования")
+          .slider
+            .slider__next
+              ul.slider__list
+                li.slider__item
+                  img(src="assets/img/slide-1.png" alt="")
+                li.slider__item.active
+                  img(src="assets/img/slide-2.png" alt="")
+                li.slider__item
+                  img(src="assets/img/slide-3.png" alt="")
+                li.slider__item
+                  img(src="assets/img/slide-4.png" alt="")
+            .slider__controls
+              a.slider__link-right(href="#")
     section.about
       .about__header Что обо мне говорят
         .about-pic_work

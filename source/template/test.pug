@@ -21,45 +21,30 @@ body
       .portfolio__small-slide
         .slider__left
           .slider
-            .slider__display
+            .slider__prev
               ul.slider__list
                 li.slider__item
-                  img(src='assets/img/slide-1.png', alt='')
+                  img(src="assets/img/slide-1.png" alt="")
                 li.slider__item
-                  img(src='assets/img/slide-2.png', alt='')
+                  img(src="assets/img/slide-2.png" alt="")
+                li.slider__item
+                  img(src="assets/img/slide-3.png" alt="")
                 li.slider__item.active
-                  img(src='assets/img/slide-3.png', alt='')
-                li.slider__item
-                  img(src='assets/img/slide-4.png', alt='')
+                  img(src="assets/img/slide-4.png" alt="")
             .slider__controls
               a.slider__link-left(href="#")
         .slider__right
           .slider
-            .slider__display
+            .slider__next
               ul.slider__list
+                li.slider__item
+                  img(src="assets/img/slide-1.png" alt="")
                 li.slider__item.active
-                  img(src='assets/img/slide-1.png', alt='')
+                  img(src="assets/img/slide-2.png" alt="")
                 li.slider__item
-                  img(src='assets/img/slide-2.png', alt='')
+                  img(src="assets/img/slide-3.png" alt="")
                 li.slider__item
-                  img(src='assets/img/slide-3.png', alt='')
-                li.slider__item
-                  img(src='assets/img/slide-4.png', alt='')
+                  img(src="assets/img/slide-4.png" alt="")
             .slider__controls
               a.slider__link-right(href="#")
-
-    //- .slider
-    //-   .slider__display
-    //-     ul.slider__list
-    //-       li.slider__item.active
-    //-         img(src='assets/img/slide-1.png', alt='')
-    //-       li.slider__item
-    //-         img(src='assets/img/slide-2.png', alt='')
-    //-       li.slider__item
-    //-         img(src='assets/img/slide-3.png', alt='')
-    //-       li.slider__item
-    //-         img(src='assets/img/slide-4.png', alt='')
-    //-   .slider__controls
-    //-     a.slider__controls-top(href='#')
-    //-       | Следующая
   include common/_footer

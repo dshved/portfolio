@@ -57,6 +57,23 @@ myModule.init();
 
 $(document).ready(function() {
 
+  $('.tabs__control-link').on('click', function(e){
+    e.preventDefault();
+    var item = $(this).closest('.tabs__controls-item'),
+        contentItem = $('.tabs__item'),
+        itemPosition = item.index();
+    contentItem.eq(itemPosition)
+      .add(item)
+      .addClass('active')
+      .siblings()
+      .removeClass('active');
+  });
+
+
+
+
+
+
 
   //Медленный скролл
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -299,18 +316,20 @@ var validateForm = (function() {
     e.preventDefault();
     var form = $('#auth');
     if (_validateForm()) {
-      username = $("#user_login").val();
-      password = $("#user_pass").val();
-      $.ajax({
-        type: "POST",
-        url: "/login",
-        data: "name=" + username + "&pass=" + password,
-        success: function(html) {
-          console.log(data);
-        }
-      });
+      location.href = 'admin.html';
+      // username = $("#user_login").val();
+      // password = $("#user_pass").val();
+
+      // $.ajax({
+      //   type: "POST",
+      //   url: "/login",
+      //   data: "name=" + username + "&pass=" + password,
+      //   success: function(html) {
+      //     console.log(data);
+      //   }
+      // });
     } else {
-      alert('Не заполнены все поля!');
+      alert('Ошибка!');
     }
   }
 

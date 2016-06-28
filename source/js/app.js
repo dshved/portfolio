@@ -58,82 +58,6 @@ myModule.init();
 $(document).ready(function() {
 
 
-  // (function() {
-  //   var counter = 1;
-
-  //   $('.slider__link-right').on('click', function(e) {
-  //     e.preventDefault();
-
-
-  //     var $this = $(this),
-  //       container = $this.closest('.slider__right'),
-  //       items = container.find('.slider__item'),
-  //       activeItem = container.find('.slider__item.next');
-
-
-
-  //     if (counter >= items.length) {
-  //       counter = 0;
-  //     }
-
-  //     var reqItem = items.eq(counter);
-
-  //     activeItem.animate({
-  //       'top': '100%'
-  //     }, 300);
-
-  //     reqItem.animate({
-  //       'top': '0%'
-  //     }, 300, function() {
-  //       activeItem.removeClass('next').css('top', '-100%');
-  //       $(this).addClass('next');
-  //     });
-
-  //     counter++;
-
-  //   });
-  // }());
-
-  // (function() {
-  //   var counter = 1;
-
-  //   $('.slider__link-left').on('click', function(e) {
-  //     e.preventDefault();
-  //     console.log('lol');
-  //     var $this = $(this),
-  //       container = $this.closest('.slider__left'),
-  //       items = container.find('.slider__item'),
-  //       activeItem = container.find('.slider__item.next');
-
-
-
-  //     if (counter >= items.length) {
-  //       counter = 0;
-  //     }
-
-  //     var reqItem = items.eq(counter);
-
-  //     activeItem.animate({
-  //       'bottom': '100%'
-  //     }, 300);
-
-  //     reqItem.animate({
-  //       'bottom': '0%'
-  //     }, 300, function() {
-  //       activeItem.removeClass('next').css('bottom', '-100%');
-  //       $(this).addClass('next');
-  //     });
-
-  //     counter++;
-
-  //   });
-  // }());
-
-
-
-
-
-
   //Медленный скролл
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -148,7 +72,7 @@ $(document).ready(function() {
     }
   });
 
-
+  //Spinner
   setTimeout(function() {
     $("#page-preloader").fadeOut("slow");
     $(".bg").css('visibility', 'visible');
@@ -195,6 +119,8 @@ $(document).ready(function() {
 
 });
 
+
+//Slider Module
 var Slider = (function() {
   var currentImg = 1;
 
@@ -262,17 +188,17 @@ var Slider = (function() {
       'bottom': '100%'
     }, 300);
 
-    img.css({opacity: '0'});
+    img.css({ opacity: '0' });
 
-    setTimeout(function(){
+    setTimeout(function() {
       img.attr('src', reqImg.attr('src'));
       img.css({
         opacity: '1',
         transition: 'all .3s'
       });
-    },300);
-    
-    
+    }, 300);
+
+
 
     reqItem.animate({
       'bottom': '0%'
@@ -302,15 +228,15 @@ var Slider = (function() {
       'top': '100%'
     }, 300);
 
-    img.css({opacity: '0'});
+    img.css({ opacity: '0' });
 
-    setTimeout(function(){
+    setTimeout(function() {
       img.attr('src', reqImg.attr('src'));
       img.css({
         opacity: '1',
         transition: 'all .3s'
       });
-    },300);
+    }, 300);
 
     reqItem.animate({
       'top': '0%'
@@ -327,3 +253,71 @@ var Slider = (function() {
 })();
 
 Slider.init();
+
+
+//validation
+var validateForm = (function() {
+
+  function init() {
+    _setUpListners();
+  }
+
+  function _setUpListners() {
+    $('#auth').submit(_Auth);
+    $('#user_human').click(_check);
+  }
+
+  function _check() {
+
+    if ($(this).is(':checked')) {
+      $('#human_yes').prop("disabled", false);
+      $('#human_no').prop("disabled", false);
+    } else {
+      $('#human_yes').prop("disabled", true);
+      $('#human_no').prop("disabled", true);
+    }
+
+  }
+
+  function _validateForm() {
+    var $this = $('#auth'),
+      user_human = $this.find('#user_human'),
+      human_yes = $this.find('#human_yes'),
+      valid = true;
+    if (!user_human.prop('checked')) {
+      valid = false;
+    }
+    if (!human_yes.prop('checked')) {
+      valid = false;
+    }
+    return valid;
+
+
+  }
+
+  function _Auth(e) {
+    e.preventDefault();
+    var form = $('#auth');
+    if (_validateForm()) {
+      username = $("#user_login").val();
+      password = $("#user_pass").val();
+      $.ajax({
+        type: "POST",
+        url: "/login",
+        data: "name=" + username + "&pass=" + password,
+        success: function(html) {
+          console.log(data);
+        }
+      });
+    } else {
+      alert('Не заполнены все поля!');
+    }
+  }
+
+
+  return {
+    init: init
+  }
+})();
+
+validateForm.init();

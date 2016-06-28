@@ -442,6 +442,7 @@ label {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
+  padding-bottom: 3px;
 }
 
 [type="checkbox"]:not(:checked) + label:before,

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Панель администрирования</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="Dmitriy Shved" name="author">
+    <meta content="My portfolio" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/foundation.js"></script>
+    <script src="assets/js/app.js" defer></script>
+    <script>
+      svg4everybody();
+      
+    </script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+</html>
+<body><!--[if lt IE 7]>
+<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+<![endif]-->
+  <div class="wrap">
+    <header class="header__admin">
+      <div class="container">
+        <div class="header__title">Панель администрирования</div>
+        <div class="header__logout"><a class="header__link" href="index.html">Вернуться на сайт</a></div>
+      </div>
+    </header>
+    <section class="panel">
+      <div class="container">
+        <div class="tabs">
+          <ul class="tabs__controls">
+            <li class="tabs__controls-item active"><a class="tabs__control-link" href="#">Обо мне</a></li>
+            <li class="tabs__controls-item"><a class="tabs__control-link" href="#">Блог</a></li>
+            <li class="tabs__controls-item"><a class="tabs__control-link" href="#">Мои работы</a></li>
+          </ul>
+          <ul class="tabs__list">
+            <li class="tabs__item active">
+              <div class="tabs__title">Страница "Обо мне"</div>
+              <div class="skills__container">
+                <ul class="skills__list">
+                  <li class="skills__item">
+                    <div class="skills__head">Frontend</div>
+                    <ul class="item-list">
+                      <li class="item">
+                        <div class="item-value">Html
+                          <label class="skills__label" for="html">%</label>
+                          <input class="skills__value" type="text" name="html">
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-value">CSS
+                          <label class="skills__label" for="css">%</label>
+                          <input class="skills__value" type="text" name="css">
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-value">JavaScript
+                          <label class="skills__label" for="js">%</label>
+                          <input class="skills__value" type="text" name="js">
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="skills__item">
+                    <div class="skills__head">Workflow</div>
+                    <ul class="item-list">
+                      <li class="item">
+                        <div class="item-value">Git
+                          <label class="skills__label" for="git">%</label>
+                          <input class="skills__value" type="text" name="git">
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-value">Gulp
+                          <label class="skills__label" for="gulp">%</label>
+                          <input class="skills__value" type="text" name="gulp">
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-value">Bower
+                          <label class="skills__label" for="bower">%</label>
+                          <input class="skills__value" type="text" name="bower">
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="skills__item">
+                    <div class="skills__head">Backend</div>
+                    <ul class="item-list">
+                      <li class="item">
+                        <div class="item-value">PHP
+                          <label class="skills__label" for="php">%</label>
+                          <input class="skills__value" type="text" name="php">
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-value">Node.js
+                          <label class="skills__label" for="node">%</label>
+                          <input class="skills__value" type="text" name="node">
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-value">Mongo.db
+                          <label class="skills__label" for="mongo">%</label>
+                          <input class="skills__value" type="text" name="mongo">
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div><a class="btn__admin" id="save__skill" href="#">Сохранить</a>
+            </li>
+            <li class="tabs__item">
+              <div class="tabs__title">Страница "Блог"</div>
+              <div class="tabs__desc">Добавить запись</div>
+              <input class="blog__name" type="text" placeholder="Название" name="name">
+              <input class="blog__date" type="text" placeholder="Дата" onfocus="(this.type='date')" name="date">
+              <textarea class="blog__text" name="text" placeholder="Ваше сообщение"></textarea><a class="btn__admin" id="add__article" href="#">Добавить</a>
+            </li>
+            <li class="tabs__item">
+              <div class="tabs__title">Страница "Мои работы"</div>
+              <div class="tabs__desc">Добавить работу</div>
+              <input class="works__name" type="text" placeholder="Название проекта" name="name">
+              <input class="works__skill" type="text" placeholder="Технологии" name="skill">
+              <input class="inputfile" type="file" name="file" id="file">
+              <label for="file">Загрузить картинку</label><a class="btn__admin" id="add__work" href="#">Добавить</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>

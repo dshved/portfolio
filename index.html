@@ -55,12 +55,12 @@
         <div class="flip__back">
           <div class="card__login">
             <div class="login__header">Авторизуйтесь</div>
-            <form action="#">
+            <form id="auth" action="#" method="POST">
               <div class="input-group"><span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                <input class="form-control" type="text" placeholder="Логин">
+                <input class="form-control" id="user_login" type="text" placeholder="Логин" name="login" required>
               </div>
               <div class="input-group"><span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                <input class="form-control" type="password" placeholder="Пароль">
+                <input class="form-control" id="user_pass" type="password" name="password" placeholder="Пароль" required>
               </div>
               <div class="input-group">
                 <input class="checkbox" id="user_human" type="checkbox">
@@ -68,9 +68,9 @@
               </div>
               <input-group>
                 <div class="robot__text">А вы точно не робот?</div>
-                <input class="radio" id="human_yes" type="radio" name="human">
+                <input class="radio" id="human_yes" type="radio" name="human" disabled>
                 <label for="human_yes">Да</label>
-                <input class="radio" id="human_no" type="radio" name="human">
+                <input class="radio" id="human_no" type="radio" name="human" disabled>
                 <label for="human_no">Не уверен</label>
               </input-group>
               <div class="button-group"><a class="btn btn-index" href="#"><span>На главную</span></a>

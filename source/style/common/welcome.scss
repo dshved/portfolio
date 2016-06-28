@@ -461,14 +461,15 @@ label {
 
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-  content: '✔';
+  content: '\f00c';
   position: absolute;
-  top: 3px;
-  left: 4px;
-  font-size: 18px;
+  top: 6px;
+  left: 3px;
+  font-size: 15px;
   line-height: 0.8;
   color: #fff;
   transition: all .2s;
+  font-family: 'FontAwesome';
 }
 
 [type="checkbox"]:not(:checked) + label:after {

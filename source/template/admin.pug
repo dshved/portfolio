@@ -7,9 +7,10 @@ body
   .wrap
     header.header__admin
       .container
-        .header__title Панель администрирования
+        
         .header__logout
           a.header__link(href="index.html") Вернуться на сайт
+        .header__title Панель администрирования
     section.panel
       .container
         .tabs
@@ -62,6 +63,10 @@ body
                         .item-value PHP
                           label.skills__label(for="php") %
                           input.skills__value(type="text" name="php")
+                      li.item
+                        .item-value mySQL
+                          label.skills__label(for="mysql") %
+                          input.skills__value(type="text" name="mysql")
                       li.item
                         .item-value Node.js
                           label.skills__label(for="node") %

@@ -11,6 +11,14 @@
   height: 80px;
   background-color: #e5a730;
   @include clearfix;
+  @include phone {
+
+    text-align: center;
+  }
+  @include phoneL {
+
+    text-align: center;
+  }
 }
 
 .header__title {
@@ -20,12 +28,38 @@
   font-family: "RobotoRegular";
   font-size: 28px;
   margin-left: 50px;
+  @include phone {
+    float: none;
+    line-height: 1;
+    margin-left: 0;
+    font-size: 21px;
+  }
+  @include phoneL {
+    float: none;
+    line-height: 1;
+    margin-left: 0;
+    font-size: 21px;
+  }
 }
 
 .header__logout {
   line-height: 80px;
   float: right;
   margin-right: 50px;
+  @include phone {
+    margin: 14px 0;
+    float: none;
+    line-height: 1;
+    margin-right: 0;
+    
+  }
+  @include phoneL {
+    margin: 14px 0;
+    float: none;
+    line-height: 1;
+    margin-right: 0;
+    
+  }
 }
 
 .header__link {
@@ -34,6 +68,12 @@
   font-family: "RobotoRegular";
   font-size: 16px;
   text-decoration: underline;
+  @include phone {
+    font-size: 14px;
+  }
+  @include phoneL {
+    font-size: 14px;
+  }
 }
 
 .panel {
@@ -46,11 +86,25 @@
     height: 60px;
     background-color: #fff;
     margin-bottom: 50px;
+    @include phone {
+      height: auto;
+      text-align: center;
+    }
+    @include phoneL {
+      height: auto;
+      text-align: center;
+    }
   }
   &__controls-item {
     display: inline-block;
     &.active {
       background-color: #eee;
+    }
+    @include phone {
+      display: block;
+    }
+    @include phoneL {
+      display: block;
     }
   }
   &__control-link {
@@ -68,7 +122,7 @@
     }
   }
   &__list {
-    margin-left: 30px;
+    margin: 0 30px 30px;
   }
 }
 
@@ -162,6 +216,12 @@
   outline: none;
   padding: 12px;
   margin-bottom: 20px;
+  @include phone {
+    width: 100%;
+  }
+  @include phoneL {
+    width: 100%;
+  }
 }
 
 .blog__text {
@@ -174,6 +234,12 @@
   border: none;
   padding: 12px;
   margin-bottom: 20px;
+  @include phone {
+    width: 100%;
+  }
+  @include phoneL {
+    width: 100%;
+  }
 }
 
 .btn__admin {

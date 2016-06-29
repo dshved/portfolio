@@ -12,11 +12,11 @@ body
           .input-group
             span.input-group-addon
               i.fa.fa-user.fa-fw
-            input#user_login.form-control(type='text', name='login', placeholder='Логин' required )
+            input#user_login.form-control(type='text', name='login', placeholder='Логин')
           .input-group
             span.input-group-addon
               i.fa.fa-key.fa-fw
-            input#user_pass.form-control(type='password', name='password', placeholder='Пароль' required)
+            input#user_pass.form-control(type='password', name='password', placeholder='Пароль')
           .input-group
             input#user_human.checkbox(type='checkbox')
             label(for="user_human") Я человек
@@ -27,7 +27,7 @@ body
             input#human_no.radio(type="radio" name='human' disabled)
             label(for="human_no") Не уверен
           .button-group
-            a.btn.btn-index(href="index.html")
+            a.btn.btn-index_auth(href="index.html")
               span На главную
             button.btn.btn__right(type='submit') Войти
   .copy

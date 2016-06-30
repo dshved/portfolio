@@ -25,7 +25,54 @@
 <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
 <![endif]-->
   <div class="wrapper">
-    <section class="portfolio" id="portfolio">
+    <header class="header">
+      <nav class="navigation">
+        <div class="navigation__social">
+          <div class="social-menu">
+            <ul class="social-menu__list">
+              <li class="social-menu__item"><a class="social-menu__link" href="https://vk.com/dshved" target="_blank">
+                      <svg class="icon icon-vk icon-26 social-header-fill">
+                        <use xlink:href="assets/img/sprite.svg#vk"></use>
+                      </svg></a></li>
+              <li class="social-menu__item"><a class="social-menu__link" href="https://github.com/dshved" target="_blank">
+                      <svg class="icon icon-github icon-26 social-header-fill">
+                        <use xlink:href="assets/img/sprite.svg#github"></use>
+                      </svg></a></li>
+              <li class="social-menu__item"><a class="social-menu__link" href="https://linkedin.com/dshved" target="_blank">
+                      <svg class="icon icon-in icon-26 social-header-fill">
+                        <use xlink:href="assets/img/sprite.svg#in"></use>
+                      </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navigation__menu">
+          <div id="nav-icon"><span></span><span></span><span></span><span></span></div>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+        <ul class="overlay-menu__list">
+          <li class="overlay-menu__item"><a class="overlay-menu__link" href="work.html">Мои работы</a></li>
+          <li class="overlay-menu__item"><a class="overlay-menu__link" href="blog.html">Блог</a></li>
+          <li class="overlay-menu__item"><a class="overlay-menu__link" href="about.html">Обо мне</a></li>
+          <li class="overlay-menu__item"><a class="overlay-menu__link" href="auth.html">Авторизация</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="info">
+      <div class="user__info">
+        <div class="user__img"><img src="assets/img/user.jpg" alt="Это я!"></div>
+        <div class="user__name">Дмитрий Швед</div>
+        <div class="user__desc">Личный сайт веб-разработчик</div>
+        <div class="info-pic_work">
+              <svg class="icon icon-portfolio_header icon- ">
+                <use xlink:href="assets/img/sprite.svg#portfolio_header"></use>
+              </svg>
+        </div>
+      </div>
+    </section>
+    <section class="slider__works portfolio" id="portfolio">
       <div class="portfolio__header">Мои работы
         <div class="portfolio-pic_work">
               <svg class="icon icon-works_header icon- ">
@@ -33,20 +80,34 @@
               </svg>
         </div>
       </div>
-      <div class="portfolio__big-slide">
-        <div class="slider__center"><img src="assets/img/slide-1.png" alt="Сайт школы онлайн образования"></div>
-      </div>
-      <div class="portfolio__name">
-        <div class="portfolio__left">
-          <div class="w__container">
-            <div class="portfolio__work-name">Сайт школы онлайн образования</div>
-            <div class="portfolio__skill">HTML , CSS, JAVASCRIPT</div><a class="portfolio__link" href="http://loftschool.com" target="_blank"><i class="fa fa-link"></i> Посмотреть сайт</a>
-          </div>
+      <div class="slider__left">
+        <div class="slider__display">
+          <div class="slider__center"><img src="assets/img/slide-1.png" alt="Сайт школы онлайн образования"></div>
+        </div>
+        <div class="slider__info">
+          <ul class="slider__info-list">
+            <li class="slider__info-item active">
+              <div class="portfolio__work-name">Сайт школы онлайн образования</div>
+              <div class="portfolio__skill">HTML , CSS, JAVASCRIPT</div><a class="portfolio__link" href="http://loftschool.com" target="_blank"><i class="fa fa-link"></i> Посмотреть сайт</a>
+            </li>
+            <li class="slider__info-item">
+              <div class="portfolio__work-name">Сайт блога</div>
+              <div class="portfolio__skill">HTML , SCSS, PHP</div><a class="portfolio__link" href="http://loftschool.com" target="_blank"><i class="fa fa-link"></i> Посмотреть сайт</a>
+            </li>
+            <li class="slider__info-item">
+              <div class="portfolio__work-name">Сайт образования</div>
+              <div class="portfolio__skill">HTML , CSS, mongoDB</div><a class="portfolio__link" href="http://loftschool.com" target="_blank"><i class="fa fa-link"></i> Посмотреть сайт</a>
+            </li>
+            <li class="slider__info-item">
+              <div class="portfolio__work-name">Сайт школы </div>
+              <div class="portfolio__skill">HTML , CSS, JAVASCRIPT</div><a class="portfolio__link" href="http://loftschool.com" target="_blank"><i class="fa fa-link"></i> Посмотреть сайт</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="portfolio__small-slide">
-        <div class="slider__left">
-          <div class="slider">
+      <div class="slider__right">
+        <div class="slider__controls-work">
+          <div class="slider slider__controls-item">
             <div class="slider__prev">
               <ul class="slider__list">
                 <li class="slider__item"><img src="assets/img/slide-1.png" alt=""></li>
@@ -57,9 +118,7 @@
             </div>
             <div class="slider__controls"><a class="slider__link-left" href="#"></a></div>
           </div>
-        </div>
-        <div class="slider__right">
-          <div class="slider">
+          <div class="slider slider__controls-item">
             <div class="slider__next">
               <ul class="slider__list">
                 <li class="slider__item"><img src="assets/img/slide-1.png" alt=""></li>
@@ -72,6 +131,53 @@
           </div>
         </div>
       </div>
+    </section>
+    <section class="about">
+      <div class="about__header">Что обо мне говорят
+        <div class="about-pic_work">
+              <svg class="icon icon-about_header icon- ">
+                <use xlink:href="assets/img/sprite.svg#about_header"></use>
+              </svg>
+        </div>
+      </div>
+      <div class="about__reviews">
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__text"><span><i class="fa fa-quote-left fa-3x" aria-hidden="true"></i> Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</span></div>
+            <div class="reviews__user">
+              <div class="user-pic"><img src="assets/img/dima.png" alt="photo"></div>
+              <div class="user-info">Ковальчук Дмитрий</div>
+              <div class="user-desc">основатель LoftSchool</div>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__text"><span><i class="fa fa-quote-left fa-3x" aria-hidden="true"></i> Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей! Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</span></div>
+            <div class="reviews__user">
+              <div class="user-pic"><img src="assets/img/zar.png" alt="photo"></div>
+              <div class="user-info">Зар Захаров</div>
+              <div class="user-desc">главный преподаватель</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="widget center-block">
+        <form class="feedback__form" id="feedback">
+          <div class="feedback__header">Связаться со мной</div>
+          <input class="feedback__input" id="user_name" type="text" name="user_name" placeholder="Имя">
+          <input class="feedback__input" id="user_email" type="text" name="user_email" placeholder="Email">
+          <textarea class="feedback__text" id="msg_text" name="text" placeholder="Ваше сообщение"></textarea>
+          <div class="feedback__button">
+            <button class="btn feedback__btn_left" type="reset">Очистить</button>
+            <button class="btn feedback__btn_right" type="submit">Отправить</button>
+          </div>
+        </form>
+        <div class="blur"><img class="bg-blur" src="assets/img/bg-about.jpg" alt="Фон"></div>
+      </div><img class="bg-blur" src="assets/img/bg-about.jpg" alt="Фон">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <filter id="blur">
+          <fegaussianblur stddeviation="10"></fegaussianblur>
+        </filter>
+      </svg>
     </section>
   </div>
   <footer class="footer">

@@ -16,22 +16,35 @@ body
           +icon('portfolio_header')
       //- a(href="#portfolio").goto
       //-   +icon('arrow_down', 26)
-    section.portfolio#portfolio
+    section.slider__works.portfolio#portfolio
       .portfolio__header Мои работы
         .portfolio-pic_work
           +icon('works_header')
-      .portfolio__big-slide
-        .slider__center
+      .slider__left
+        .slider__display
+          .slider__center
               img(src="assets/img/slide-1.png", alt="Сайт школы онлайн образования")
-      .portfolio__name
-        .portfolio__left
-          .w__container
-            .portfolio__work-name Сайт школы онлайн образования
-            .portfolio__skill HTML , CSS, JAVASCRIPT
-            a.portfolio__link(href="http://loftschool.com" target="_blank") #[i.fa.fa-link] Посмотреть сайт
-      .portfolio__small-slide
-        .slider__left
-          .slider
+        .slider__info
+          ul.slider__info-list
+            li.slider__info-item.active
+              .portfolio__work-name Сайт школы онлайн образования
+              .portfolio__skill HTML , CSS, JAVASCRIPT
+              a.portfolio__link(href="http://loftschool.com" target="_blank") #[i.fa.fa-link] Посмотреть сайт
+            li.slider__info-item
+              .portfolio__work-name Сайт блога
+              .portfolio__skill HTML , SCSS, PHP
+              a.portfolio__link(href="http://loftschool.com" target="_blank") #[i.fa.fa-link] Посмотреть сайт
+            li.slider__info-item
+              .portfolio__work-name Сайт образования
+              .portfolio__skill HTML , CSS, mongoDB
+              a.portfolio__link(href="http://loftschool.com" target="_blank") #[i.fa.fa-link] Посмотреть сайт
+            li.slider__info-item
+              .portfolio__work-name Сайт школы 
+              .portfolio__skill HTML , CSS, JAVASCRIPT
+              a.portfolio__link(href="http://loftschool.com" target="_blank") #[i.fa.fa-link] Посмотреть сайт
+      .slider__right
+        .slider__controls-work
+          .slider.slider__controls-item
             .slider__prev
               ul.slider__list
                 li.slider__item
@@ -44,8 +57,7 @@ body
                   img(src="assets/img/slide-4.png" alt="")
             .slider__controls
               a.slider__link-left(href="#")
-        .slider__right
-          .slider
+          .slider.slider__controls-item
             .slider__next
               ul.slider__list
                 li.slider__item

@@ -323,78 +323,78 @@
 }
 
 .slider {
-  &__container {
-    width: 100%;
-    @include clearfix;
-  }
-  &__center {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    img {
-      display: block;
-      overflow: hidden;
-      max-width: 100%;
-      max-height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-    }
-  }
-  &__left {
-    float: left;
-    width: 50%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    img {
-      display: block;
-      overflow: hidden;
-      max-width: 100%;
-      max-height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-    }
-    @include phone {
-      height: 160px;
-    }
-    @include phoneL {
-      height: 160px;
-    }
-  }
-  &__right {
-    height: 100%;
-    float: right;
-    width: 50%;
-    overflow: hidden;
-    position: relative;
-    img {
-      display: block;
-      overflow: hidden;
-      max-width: 100%;
-      max-height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-    }
-    @include phone {
-      height: 160px;
-    }
-    @include phoneL {
-      height: 160px;
-    }
-  }
+  // &__container {
+  //   width: 100%;
+  //   @include clearfix;
+  // }
+  // &__center {
+  //   overflow: hidden;
+  //   width: 100%;
+  //   height: 100%;
+  //   position: relative;
+  //   img {
+  //     display: block;
+  //     overflow: hidden;
+  //     max-width: 100%;
+  //     max-height: 100%;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     bottom: 0;
+  //     right: 0;
+  //     margin: auto;
+  //   }
+  // }
+  // &__left {
+  //   float: left;
+  //   width: 50%;
+  //   height: 100%;
+  //   position: relative;
+  //   overflow: hidden;
+  //   img {
+  //     display: block;
+  //     overflow: hidden;
+  //     max-width: 100%;
+  //     max-height: 100%;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     bottom: 0;
+  //     right: 0;
+  //     margin: auto;
+  //   }
+  //   @include phone {
+  //     height: 160px;
+  //   }
+  //   @include phoneL {
+  //     height: 160px;
+  //   }
+  // }
+  // &__right {
+  //   height: 100%;
+  //   float: right;
+  //   width: 50%;
+  //   overflow: hidden;
+  //   position: relative;
+  //   img {
+  //     display: block;
+  //     overflow: hidden;
+  //     max-width: 100%;
+  //     max-height: 100%;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     bottom: 0;
+  //     right: 0;
+  //     margin: auto;
+  //   }
+  //   @include phone {
+  //     height: 160px;
+  //   }
+  //   @include phoneL {
+  //     height: 160px;
+  //   }
+  // }
   &__link-left {
     display: block;
     position: relative;
@@ -467,6 +467,63 @@
     &:hover:before {
       margin-top: -28px;
     }
+  }
+}
+
+.slider__list {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slider__controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slider__next {
+  overflow: hidden;
+  height: 100px;
+  .slider__item {
+    bottom: -100%;
+    &.active {
+      bottom: 0%;
+    }
+  }
+}
+
+.slider__prev {
+  overflow: hidden;
+  height: 100px;
+  .slider__item {
+    top: -100%;
+    &.active {
+      top: 0%;
+    }
+  }
+}
+
+.slider__item {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
   }
 }
 
@@ -742,5 +799,148 @@ img.bg-blur {
   }
   &__btn_right {
     border-bottom-right-radius: 5px;
+  }
+}
+
+.slider-works {
+  background: #f0efe9;
+  @include clearfix;
+  height: 100vh;
+  min-height: 650px;
+  @include phone {
+    height: auto;
+    min-height: 0;
+  }
+  @include phoneL {
+    height: auto;
+    min-height: 0;
+  }
+}
+
+.slider__left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0;
+    @include phone {
+      display: none;
+    }
+    @include phoneL {
+      display: none;
+    }
+  }
+  @include phone {
+    float: none;
+    width: 100%;
+  }
+  @include phoneL {
+    float: none;
+    width: 100%;
+  }
+}
+
+.slider__info {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 90%;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  width: 90%;
+  @include phone {
+    height: 180px;
+  }
+  @include phoneL {
+    height: 180px;
+  }
+}
+
+.slider__info-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slider__info-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  &.active {
+    display: block;
+  }
+}
+
+.slider__right {
+  background: #efebe0;
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  @include phone {
+    float: none;
+    width: 100%;
+  }
+  @include phoneL {
+    float: none;
+    width: 100%;
+  }
+}
+
+.slider__controls-work {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  @include phone {
+    position: static;
+    height: 100px;
+  }
+  @include phoneL {
+    position: static;
+    height: 100px;
+  }
+}
+
+.slider__controls-item {
+  display: block;
+  float: left;
+  width: 50%;
+  position: relative;
+  height: 100%;
+}
+
+.slider__display {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 70%;
+  img {
+    max-width: 90%;
+    max-height: 90%;
+    @include centered();
+  }
+  @include phone {
+    position: static;
+    height: 300px;
+    left: 0;
+  }
+  @include phoneL {
+    position: static;
+    height: 300px;
+    left: 0;
   }
 }

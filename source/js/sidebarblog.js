@@ -11,6 +11,7 @@ var SidebarBlog = (function() {
   var _setUpListners = function() {
     sidebar.on('click', _sidebarActive);
     $(window).scroll(_sidebarFixed);
+    $(window).scroll(_sidebarActivePost);
   };
 
   var _sidebarActive = function(e) {
@@ -25,10 +26,27 @@ var SidebarBlog = (function() {
     var y = $(this).scrollTop();
     if (y >= top) {
       sidebar.addClass('fixed');
+
     } else {
       sidebar.removeClass('fixed');
     };
   };
+
+
+  var section = $('.article');
+
+  var _sidebarActivePost = function(e) {
+    var scroll = $(window).scrollTop();
+    var sLink = $('.sidebar__link');
+    section.each(function(index, elem) {
+      var topEdge = $(elem).offset().top - scroll;
+      var bottomEdge = topEdge + $(elem).height(); 
+      if (topEdge < 10 && bottomEdge > 10) {
+        sLink.removeClass('active');
+        $('#link-' + index).addClass('active');
+      }
+    });
+  }
 
   return {
     init: init

@@ -11,7 +11,7 @@ var SidebarBlog = (function() {
   var _setUpListners = function() {
     sidebar.on('click', _sidebarActive);
     $(window).scroll(_sidebarFixed);
-    $(window).resize(_windowResize,_sidebarActivePost);
+    $(window).resize(_windowResize,_sidebarFixed);
     $(window).scroll(_sidebarActivePost);
   };
 

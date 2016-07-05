@@ -315,14 +315,26 @@
   }
   @include phone {
     height: auto;
+    min-height: auto;
   }
   @include phoneL {
     height: auto;
+    min-height: auto;
   }
   @include clearfix;
 }
 
 .slider {
+  &__center {
+    @include phone {
+      position: relative;
+      height: 300px;
+    }
+    @include phoneL {
+      position: relative;
+      height: 300px;
+    }
+  }
   // &__container {
   //   width: 100%;
   //   @include clearfix;
